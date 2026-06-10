@@ -2,10 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import AdSlot from '@/components/AdSlot';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://policyglobal.vercel.app'),
+  metadataBase: new URL('https://policy-global.vercel.app'),
   title: {
     default: 'PolicyGlobal — Global Insurance & Finance News',
     template: '%s | PolicyGlobal',
@@ -23,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://policyglobal.vercel.app',
+    url: 'https://policy-global.vercel.app',
     siteName: 'PolicyGlobal',
     title: 'PolicyGlobal — Global Insurance & Finance News',
     description:
@@ -47,11 +46,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -60,17 +55,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
-        {/* Top Banner Ad */}
-        <div className="w-full">
-          <AdSlot variant="banner" className="h-14 mx-auto max-w-7xl my-1 px-4" />
-        </div>
-
         <Header />
-
         <main className="flex-1 animate-fade-in">
           {children}
         </main>
-
         <Footer />
       </body>
     </html>
