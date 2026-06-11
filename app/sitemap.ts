@@ -32,14 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const categoryPages: MetadataRoute.Sitemap = CATEGORIES.map((c) => ({
-    url: `${base}/category/${c.slug}`,
+    url: `${base}/category/${c.slug.replace(/&/g, 'and')}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.6,
   }));
 
   const countryPages: MetadataRoute.Sitemap = COUNTRIES.map((c) => ({
-    url: `${base}/country/${c.slug}`,
+    url: `${base}/country/${c.slug.replace(/&/g, 'and')}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.6,

@@ -9,7 +9,7 @@ export const CATEGORIES = [
   { label: 'Healthcare Insurance', slug: 'healthcare-insurance' },
   { label: 'Auto Insurance', slug: 'auto-insurance' },
   { label: 'Life Insurance', slug: 'life-insurance' },
-  { label: 'Loans & Mortgage', slug: 'loans-&-mortgage' },
+  { label: 'Loans & Mortgage', slug: 'loans-and-mortgage' }, // ✅ Fixed & → and
 ];
 
 export const COUNTRIES = [
