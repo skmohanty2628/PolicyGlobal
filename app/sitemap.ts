@@ -3,7 +3,7 @@ import { getAllNews, getAllDates } from '@/lib/news';
 import { CATEGORIES, COUNTRIES } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://policyrix.com'; // ✅ Updated
+  const base = 'https://policyrix.com';
 
   const articles = getAllNews();
   const dates = getAllDates();
@@ -17,15 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
   ];
 
-  // Your slug generator — wherever it is
-function generateSlug(title: string): string {
-  return title
-    .toLowerCase()
-    .replace(/&/g, 'and')      // ✅ & → and
-    .replace(/[^a-z0-9\s-]/g, '') // remove special chars
-    .replace(/\s+/g, '-')       // spaces → hyphens
-    .trim();
-}
+  const articlePages: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${base}/news/${a.date}/${a.slug.replace(/&/g, 'and')}`,
+    lastModified: new Date(a.verified_at),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
 
   const dailyPages: MetadataRoute.Sitemap = dates.map((d) => ({
     url: `${base}/daily/${d}`,
