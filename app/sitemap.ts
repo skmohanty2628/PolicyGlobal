@@ -3,7 +3,8 @@ import { getAllNews, getAllDates } from '@/lib/news';
 import { CATEGORIES, COUNTRIES } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://policyglobal.vercel.app';
+  const base = 'https://policyrix.com'; // ✅ Updated
+
   const articles = getAllNews();
   const dates = getAllDates();
 
