@@ -1,3 +1,4 @@
+// app/robots.ts
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -7,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://policyglobal.vercel.app/sitemap.xml',
-    host: 'https://policyglobal.vercel.app',
+    sitemap: 'https://policyrix.com/sitemap.xml',
+    host: 'https://policyrix.com',
   };
 }

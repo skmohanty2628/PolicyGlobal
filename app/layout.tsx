@@ -1,30 +1,31 @@
+// app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://policy-global.vercel.app'),
+  metadataBase: new URL('https://policyrix.com'), // ✅ Fixed
   title: {
-    default: 'PolicyGlobal — Global Insurance & Finance News',
-    template: '%s | PolicyGlobal',
+    default: 'PolicyRix — Global Insurance & Finance News',
+    template: '%s | PolicyRix',
   },
   description:
-    'PolicyGlobal delivers verified, trusted global insurance and finance news — covering auto insurance, healthcare, life insurance, banking, fintech, mortgage, and economic regulation across the US, India, UK, Australia, and more.',
+    'PolicyRix delivers verified, trusted global insurance and finance news — covering auto insurance, healthcare, life insurance, banking, fintech, mortgage, and economic regulation across the US, India, UK, Australia, and more.',
   keywords: [
     'insurance news', 'finance news', 'global insurance', 'healthcare insurance',
     'auto insurance', 'life insurance', 'banking regulation', 'fintech news',
     'mortgage rates', 'economic policy', 'insurance regulation',
   ],
-  authors: [{ name: 'PolicyGlobal Editorial Desk' }],
-  creator: 'PolicyGlobal',
-  publisher: 'PolicyGlobal',
+  authors: [{ name: 'PolicyRix Editorial Desk' }],
+  creator: 'PolicyRix',
+  publisher: 'PolicyRix',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://policy-global.vercel.app',
-    siteName: 'PolicyGlobal',
-    title: 'PolicyGlobal — Global Insurance & Finance News',
+    url: 'https://policyrix.com', // ✅ Fixed
+    siteName: 'PolicyRix',
+    title: 'PolicyRix — Global Insurance & Finance News',
     description:
       'Verified global insurance and finance news — Bloomberg-quality coverage for the insurance-savvy reader.',
     images: [
@@ -32,13 +33,13 @@ export const metadata: Metadata = {
         url: '/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'PolicyGlobal — Global Insurance & Finance News',
+        alt: 'PolicyRix — Global Insurance & Finance News',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PolicyGlobal — Global Insurance & Finance News',
+    title: 'PolicyRix — Global Insurance & Finance News',
     description:
       'Verified global insurance and finance news — daily briefings on insurance, banking, fintech, and markets.',
     images: ['/og-default.png'],

@@ -1,8 +1,9 @@
+// app/api/subscribe/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const FROM_EMAIL = 'PolicyGlobal <hello@policyglobal.com>';
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://policy-global.vercel.app';
+const FROM_EMAIL = 'PolicyRix <hello@policyrix.com>'; // ✅ Fixed
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://policyrix.com'; // ✅ Fixed
 
 export async function POST(req: NextRequest) {
   try {
@@ -25,7 +26,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: FROM_EMAIL,
         to: [email],
-        subject: "You're subscribed to PolicyGlobal Daily Brief",
+        subject: "You're subscribed to PolicyRix Daily Brief",
         html: `<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/></head>
@@ -35,7 +36,7 @@ export async function POST(req: NextRequest) {
 <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
 <tr>
   <td style="background:linear-gradient(135deg,#0A1628,#162444);border-radius:16px 16px 0 0;padding:36px 40px;text-align:center;">
-    <div style="font-size:22px;font-weight:700;color:#ffffff;margin-bottom:6px;">PolicyGlobal</div>
+    <div style="font-size:22px;font-weight:700;color:#ffffff;margin-bottom:6px;">PolicyRix</div>
     <p style="color:#C9A84C;font-size:11px;letter-spacing:3px;text-transform:uppercase;margin:0;">Insurance &amp; Finance Intelligence</p>
   </td>
 </tr>
@@ -43,7 +44,7 @@ export async function POST(req: NextRequest) {
   <td style="background:#ffffff;padding:40px;border-left:1px solid #E2E8F0;border-right:1px solid #E2E8F0;">
     <h1 style="font-size:26px;font-weight:700;color:#0A1628;margin:0 0 16px;">You are subscribed!</h1>
     <p style="font-size:15px;color:#475569;line-height:1.7;margin:0 0 24px;">
-      Welcome to <strong>The PolicyGlobal Daily Brief</strong>. You will receive the top verified
+      Welcome to <strong>The PolicyRix Daily Brief</strong>. You will receive the top verified
       insurance and finance stories from around the world, curated by our editorial desk and sourced
       from Reuters, Bloomberg, FCA, RBI, and other trusted publishers.
     </p>
@@ -65,7 +66,7 @@ export async function POST(req: NextRequest) {
 </tr>
 <tr>
   <td style="background:#0A1628;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;">
-    <p style="color:#475569;font-size:12px;margin:0 0 6px;">PolicyGlobal - Independent - Verified - Informational</p>
+    <p style="color:#475569;font-size:12px;margin:0 0 6px;">PolicyRix - Independent - Verified - Informational</p>
     <p style="color:#334155;font-size:11px;margin:0;">
       You subscribed at ${SITE_URL}. 
       <a href="${SITE_URL}/disclaimer" style="color:#C9A84C;">Disclaimer</a> - 
