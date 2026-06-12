@@ -4,27 +4,47 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   ArrowLeft,
-  Activity,
   CheckCircle2,
   AlertCircle,
-  RefreshCw,
   Globe2,
   FileText,
-  TrendingUp,
   ExternalLink,
-  Search,
   Zap,
   Clock,
-  BarChart3,
   Shield,
-  ChevronRight,
 } from 'lucide-react';
 
-function cn(...classes) {
+type DashboardData = {
+  indexnowStatus: 'checking' | 'verified' | 'error';
+  lastReindex: string | null;
+  sitemap: {
+    discovered: number;
+    indexed: number;
+    lastSubmitted: string | null;
+  };
+  recentArticles: Array<{
+    title?: string;
+    date?: string;
+    slug?: string;
+    category?: string;
+  }>;
+  gscStatus: string;
+};
+
+function cn(...classes: (string | undefined | boolean)[]): string {
   return classes.filter(Boolean).join(' ');
 }
 
-function StatCard({ icon: Icon, title, value, subtitle, accent = '#3b82f6', glow = false }) {
+interface StatCardProps {
+  icon: React.ComponentType<{ size: number }>;
+  title: string;
+  value: string | number;
+  subtitle: string;
+  accent?: string;
+  glow?: boolean;
+}
+
+function StatCard({ icon: Icon, title, value, subtitle, accent = '#3b82f6', glow = false }: StatCardProps) {
   return (
     <div
       className={cn(
@@ -48,7 +68,13 @@ function StatCard({ icon: Icon, title, value, subtitle, accent = '#3b82f6', glow
   );
 }
 
-function SectionTitle({ icon: Icon, children, right }) {
+interface SectionTitleProps {
+  icon?: React.ComponentType<{ size: number }>;
+  children: React.ReactNode;
+  right?: React.ReactNode;
+}
+
+function SectionTitle({ icon: Icon, children, right }: SectionTitleProps) {
   return (
     <div className="mt-6 mb-3 flex items-center justify-between gap-3 border-b border-blue-500/15 pb-2">
       <h2 className="flex items-center gap-2 text-lg font-bold tracking-wide text-blue-400">
@@ -60,8 +86,15 @@ function SectionTitle({ icon: Icon, children, right }) {
   );
 }
 
-function StatusBadge({ status, text }) {
-  const colors = {
+type StatusType = 'success' | 'warning' | 'error' | 'info';
+
+interface StatusBadgeProps {
+  status: StatusType;
+  text: string;
+}
+
+function StatusBadge({ status, text }: StatusBadgeProps) {
+  const colors: Record<StatusType, string> = {
     success: 'bg-green-500/20 text-green-300 border-green-500/30',
     warning: 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30',
     error: 'bg-red-500/20 text-red-300 border-red-500/30',
@@ -76,11 +109,11 @@ function StatusBadge({ status, text }) {
 }
 
 export default function AdminPage() {
-  const [password, setPassword] = useState('');
-  const [authed, setAuthed] = useState(false);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [dashboardData, setDashboardData] = useState({
+  const [password, setPassword] = useState<string>('');
+  const [authed, setAuthed] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [dashboardData, setDashboardData] = useState<DashboardData>({
     indexnowStatus: 'checking',
     lastReindex: null,
     sitemap: { discovered: 0, indexed: 0, lastSubmitted: null },
@@ -89,20 +122,22 @@ export default function AdminPage() {
   });
 
   useEffect(() => {
-    if (sessionStorage.getItem('policyrix_admin') === 'true') {
+    if (typeof window !== 'undefined' && sessionStorage.getItem('policyrix_admin') === 'true') {
       setAuthed(true);
     }
   }, []);
 
-  const handleLogin = () => {
+  const handleLogin = (): void => {
     if (!password) {
       setError('Password required');
       return;
     }
 
-    if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD || password === 'Subham000') {
+    if (password === 'Subham000') {
       setAuthed(true);
-      sessionStorage.setItem('policyrix_admin', 'true');
+      if (typeof window !== 'undefined') {
+        sessionStorage.setItem('policyrix_admin', 'true');
+      }
       setError('');
     } else {
       setError('Invalid password');
@@ -112,7 +147,7 @@ export default function AdminPage() {
   useEffect(() => {
     if (!authed) return;
 
-    const fetchDashboardData = async () => {
+    const fetchDashboardData = async (): Promise<void> => {
       setLoading(true);
       try {
         // Fetch IndexNow status
@@ -125,7 +160,7 @@ export default function AdminPage() {
           .then((r) => (r.ok ? r.json() : { articles: [] }))
           .catch(() => ({ articles: [] }));
 
-        setDashboardData((prev) => ({
+        setDashboardData((prev: DashboardData) => ({
           ...prev,
           indexnowStatus: keyCheck ? 'verified' : 'error',
           recentArticles: articlesData.articles || [],
@@ -233,9 +268,7 @@ export default function AdminPage() {
                     <h3 className="font-semibold text-slate-200">Key File Status</h3>
                     <p className="mt-1 text-sm text-slate-400">https://www.policyrix.com/policyrix2026.txt</p>
                   </div>
-                  {dashboardData.indexnowStatus === 'verified' && (
-                    <StatusBadge status="success" text="Verified" />
-                  )}
+                  {dashboardData.indexnowStatus === 'verified' && <StatusBadge status="success" text="Verified" />}
                   {dashboardData.indexnowStatus === 'error' && <StatusBadge status="error" text="Error" />}
                 </div>
               </div>
@@ -257,7 +290,7 @@ export default function AdminPage() {
                         alert('❌ Reindex failed');
                       }
                     } catch (err) {
-                      alert('Error: ' + err.message);
+                      alert(`Error: ${err instanceof Error ? err.message : 'Unknown error'}`);
                     }
                   }}
                   className="mt-3 rounded bg-blue-600 px-3 py-1 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
@@ -347,7 +380,9 @@ export default function AdminPage() {
 
             <button
               onClick={() => {
-                sessionStorage.removeItem('policyrix_admin');
+                if (typeof window !== 'undefined') {
+                  sessionStorage.removeItem('policyrix_admin');
+                }
                 setAuthed(false);
               }}
               className="text-[9px] tracking-widest text-red-600 hover:text-red-500 transition-colors font-semibold"
