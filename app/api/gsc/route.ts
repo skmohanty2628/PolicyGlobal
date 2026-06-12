@@ -26,10 +26,7 @@ export async function GET(req: NextRequest) {
         private_key: privateKey,
         client_email: clientEmail,
         client_id: clientId,
-        auth_uri: 'https://accounts.google.com/o/oauth2/auth',
-        token_uri: 'https://oauth2.googleapis.com/token',
-        auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs',
-      },
+      } as any,
       scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
     });
 
@@ -44,7 +41,7 @@ export async function GET(req: NextRequest) {
     // Query GSC data
     const response = await webmasters.searchanalytics.query({
       siteUrl: 'https://policyrix.com/',
-      auth,
+      auth: auth as any,
       requestBody: {
         startDate: startDate,
         endDate: endDate,
@@ -61,7 +58,7 @@ export async function GET(req: NextRequest) {
     let rowCount = 0;
 
     if (response.data.rows && response.data.rows.length > 0) {
-      response.data.rows.forEach((row) => {
+      response.data.rows.forEach((row: any) => {
         totalClicks += row.clicks || 0;
         totalImpressions += row.impressions || 0;
         totalCtr += row.ctr || 0;
