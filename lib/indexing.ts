@@ -60,7 +60,7 @@ export async function notifyGoogleBatch(
     }));
   }
 
-  const results = [];
+  const results: { url: string; success: boolean; error?: string }[] = [];
 
   // IndexNow has a limit of 10,000 URLs per request
   // If we have more, split into batches
