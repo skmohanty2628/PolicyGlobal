@@ -1,11 +1,12 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://policyrix.com'), // ✅ Fixed
+  metadataBase: new URL('https://policyrix.com'),
   title: {
     default: 'PolicyRix — Global Insurance & Finance News',
     template: '%s | PolicyRix',
@@ -13,9 +14,17 @@ export const metadata: Metadata = {
   description:
     'PolicyRix delivers verified, trusted global insurance and finance news — covering auto insurance, healthcare, life insurance, banking, fintech, mortgage, and economic regulation across the US, India, UK, Australia, and more.',
   keywords: [
-    'insurance news', 'finance news', 'global insurance', 'healthcare insurance',
-    'auto insurance', 'life insurance', 'banking regulation', 'fintech news',
-    'mortgage rates', 'economic policy', 'insurance regulation',
+    'insurance news',
+    'finance news',
+    'global insurance',
+    'healthcare insurance',
+    'auto insurance',
+    'life insurance',
+    'banking regulation',
+    'fintech news',
+    'mortgage rates',
+    'economic policy',
+    'insurance regulation',
   ],
   authors: [{ name: 'PolicyRix Editorial Desk' }],
   creator: 'PolicyRix',
@@ -23,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://policyrix.com', // ✅ Fixed
+    url: 'https://policyrix.com',
     siteName: 'PolicyRix',
     title: 'PolicyRix — Global Insurance & Finance News',
     description:
@@ -54,6 +63,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+
+        {/* ✅ GA4 Tracking Code */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-LK521ZYKJE"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-LK521ZYKJE');
+          `}
+        </Script>
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
         <Header />
