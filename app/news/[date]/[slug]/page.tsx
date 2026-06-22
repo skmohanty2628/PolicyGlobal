@@ -64,9 +64,9 @@ export default function ArticlePage({ params }: { params: Params }) {
     publisher: {
       '@type': 'Organization',
       name: 'PolicyGlobal',
-      logo: { '@type': 'ImageObject', url: 'https://policyglobal.vercel.app/og-default.png' },
+      logo: { '@type': 'ImageObject', url: 'https://policyrix.com/og-default.png' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://policyglobal.vercel.app/news/${params.date}/${params.slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://policyrix.com/news/${params.date}/${params.slug}` },
   };
 
   return (
