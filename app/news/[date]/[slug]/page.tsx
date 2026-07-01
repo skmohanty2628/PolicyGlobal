@@ -102,14 +102,12 @@ export default function ArticlePage({ params }: { params: Params }) {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* ── Article ── */}
           <article className="lg:col-span-2">
-            {/* Breadcrumbs */}
             <Breadcrumbs crumbs={[
               { label: 'News', href: '/' },
               { label: params.date, href: `/daily/${params.date}` },
               { label: article.title },
             ]} />
 
-            {/* Meta */}
             <div className="flex flex-wrap items-center gap-4 mt-4 mb-6 pb-6 border-b border-gray-200">
               <div className="text-xs text-slate-500 font-mono">
                 <span className="font-semibold text-slate-700">Editorial Desk</span>
@@ -130,23 +128,19 @@ export default function ArticlePage({ params }: { params: Params }) {
               )}
             </div>
 
-            {/* Summary Lead */}
             <p className="text-lg text-slate-600 leading-relaxed mb-6 font-medium border-l-4 pl-4"
               style={{ borderColor: '#C9A84C' }}>
               {article.summary}
             </p>
 
-            {/* Ad: Article Middle */}
             <AdSlot variant="inline" className="h-16 mb-6" />
 
-            {/* Description */}
             <div className="article-prose mb-8">
               {article.description.split('\n\n').map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
             </div>
 
-            {/* Video Embed */}
             {article.video_url && (
               <div className="mb-8 rounded-xl overflow-hidden aspect-video bg-black">
                 <iframe src={article.video_url} title={article.title}
@@ -154,7 +148,6 @@ export default function ArticlePage({ params }: { params: Params }) {
               </div>
             )}
 
-            {/* Key Points */}
             <div className="rounded-xl p-6 mb-6 border" style={{ background: '#F8F9FA', borderColor: '#E2E8F0' }}>
               <h2 className="font-serif font-bold text-navy-900 text-lg mb-4 flex items-center gap-2"
                 style={{ color: '#0A1628' }}>
@@ -174,7 +167,6 @@ export default function ArticlePage({ params }: { params: Params }) {
               </ul>
             </div>
 
-            {/* Why It Matters */}
             <div className="rounded-xl p-6 mb-6" style={{ background: '#0A1628', border: '1px solid rgba(201,168,76,0.25)' }}>
               <h2 className="font-mono text-gold-400 text-xs uppercase tracking-widest mb-3">
                 Why This Matters
@@ -182,17 +174,14 @@ export default function ArticlePage({ params }: { params: Params }) {
               <p className="text-slate-300 text-sm leading-relaxed">{article.why_it_matters}</p>
             </div>
 
-            {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {article.tags.map((tag) => (
-                <span key={tag}
-                  className="text-xs font-mono px-3 py-1 rounded-full bg-gray-100 text-slate-500">
+                <span key={tag} className="text-xs font-mono px-3 py-1 rounded-full bg-gray-100 text-slate-500">
                   #{tag}
                 </span>
               ))}
             </div>
 
-            {/* Source Badge */}
             <SourceBadge
               sourceName={article.source_name}
               sourceUrl={article.source_url}
@@ -200,10 +189,8 @@ export default function ArticlePage({ params }: { params: Params }) {
               verifiedAt={article.verified_at}
             />
 
-            {/* Article Bottom Ad */}
             <AdSlot variant="bottom" className="h-20 mt-8" />
 
-            {/* Disclaimer */}
             <div className="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-800 leading-relaxed">
               <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute
               financial, investment, legal, or insurance advice. Always consult a qualified professional before
@@ -211,10 +198,7 @@ export default function ArticlePage({ params }: { params: Params }) {
               sources and cannot guarantee the accuracy or completeness of such information.
             </div>
 
-            {/* Related News */}
             <RelatedNews articles={related} />
-
-            {/* Newsletter */}
             <NewsletterBox />
           </article>
 
@@ -222,12 +206,12 @@ export default function ArticlePage({ params }: { params: Params }) {
           <aside className="space-y-6">
             <AdSlot variant="sidebar" className="h-64" />
 
-            {/* Category & Country */}
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
               <h3 className="font-serif font-bold text-navy-900 text-base mb-4" style={{ color: '#0A1628' }}>
                 More in this Category
               </h3>
-              <Link href={`/category/${article.category.toLowerCase().replace(/\s+/g, '-')}`}
+              {/* ✅ Bug 1 Fixed: & → and before replacing spaces */}
+              <Link href={`/category/${article.category.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-')}`}
                 className="text-sm font-semibold text-gold-600 hover:underline">
                 Browse all {article.category} stories →
               </Link>

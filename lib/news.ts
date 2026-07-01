@@ -60,10 +60,12 @@ export function getNewsBySlug(date: string, slug: string): NewsArticle | null {
   return articles.find((a) => a.slug === slug) ?? null;
 }
 
+// ✅ Bug 2 Fixed: properly normalizes & → and before slug comparison
 export function getNewsByCategory(category: string): NewsArticle[] {
+  const normalize = (s: string) =>
+    s.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-');
   return getAllNews().filter(
-    (a) => a.category.toLowerCase().replace(/[\s&]+/g, '-') ===
-      category.toLowerCase().replace(/[\s&]+/g, '-')
+    (a) => normalize(a.category) === normalize(category)
   );
 }
 
