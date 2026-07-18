@@ -79,12 +79,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Script>
 
         {/* ✅ AdSense verification/ad script */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7617760862667547"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT &&
+          process.env.NEXT_PUBLIC_ADSENSE_CLIENT !== 'ca-pub-your-id-here' && (
+            <Script
+              async
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
+              crossOrigin="anonymous"
+              strategy="afterInteractive"
+            />
+          )}
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
         <Header />
