@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 rounded flex items-center justify-center text-navy-900 font-bold text-sm"
                 style={{ background: 'linear-gradient(135deg, #E0B84A, #F0D080)' }}>
-                PG
+                PR
               </div>
               <span className="font-serif font-bold text-white text-lg">PolicyRix</span>
             </div>
