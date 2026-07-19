@@ -55,8 +55,12 @@ export default function AboutPage() {
         <p>PolicyRix is advertising-supported. Advertisers do not influence our editorial decisions. All ad placements are clearly labelled as advertisements. We do not accept sponsored content that is presented as editorial news.</p>
 
         <div className="mt-8 flex gap-4 flex-wrap">
-          <Link href="/contact" className="px-5 py-2.5 rounded-lg font-bold text-sm text-navy-900"
+          <Link href="/masthead" className="px-5 py-2.5 rounded-lg font-bold text-sm text-navy-900"
             style={{ background: 'linear-gradient(135deg, #C9A84C, #E0B84A)' }}>
+            Meet the Editorial Team
+          </Link>
+          <Link href="/contact" className="px-5 py-2.5 rounded-lg font-bold text-sm border text-slate-700"
+            style={{ borderColor: '#CBD5E1' }}>
             Contact Us
           </Link>
           <Link href="/disclaimer" className="px-5 py-2.5 rounded-lg font-bold text-sm border text-slate-700"
