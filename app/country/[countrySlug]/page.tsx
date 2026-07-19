@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { countrySlug: stri
   const label = COUNTRIES.find((c) => c.slug === params.countrySlug)?.label ?? slugToLabel(params.countrySlug);
   return {
     title: `${label} Insurance & Finance News`,
-    description: `Latest verified insurance and finance news from ${label} — PolicyGlobal global coverage.`,
+    description: `Latest verified insurance and finance news from ${label} — PolicyRix global coverage.`,
   };
 }
 

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { date: string } })
   const display = formatDate(params.date);
   return {
     title: `Daily Brief: ${display}`,
-    description: `All insurance and finance news from PolicyGlobal for ${display}. Verified stories from global sources.`,
+    description: `All insurance and finance news from PolicyRix for ${display}. Verified stories from global sources.`,
   };
 }
 

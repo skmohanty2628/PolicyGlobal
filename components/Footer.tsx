@@ -37,7 +37,7 @@ export default function Footer() {
                 style={{ background: 'linear-gradient(135deg, #E0B84A, #F0D080)' }}>
                 PG
               </div>
-              <span className="font-serif font-bold text-white text-lg">PolicyGlobal</span>
+              <span className="font-serif font-bold text-white text-lg">PolicyRix</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
               Your trusted source for global insurance and finance intelligence. Coverage spanning
@@ -103,18 +103,18 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="border-t border-navy-700 pt-6 mb-6" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
           <p className="text-slate-500 text-xs leading-relaxed">
-            <strong className="text-slate-400">Important Disclaimer:</strong> PolicyGlobal publishes
+            <strong className="text-slate-400">Important Disclaimer:</strong> PolicyRix publishes
             informational news and analysis sourced from publicly available, verified third-party
             sources. Nothing on this website constitutes financial, investment, legal, or insurance
             advice. Always consult a qualified professional before making financial decisions.
-            PolicyGlobal is not affiliated with any insurance company, financial institution, or
+            PolicyRix is not affiliated with any insurance company, financial institution, or
             government regulatory body. We may display advertising; advertisers do not influence
             our editorial content.
           </p>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
-          <p>© {currentYear} PolicyGlobal. All rights reserved.</p>
+          <p>© {currentYear} PolicyRix. All rights reserved.</p>
           <p className="font-mono">Verified · Independent · Informational</p>
         </div>
       </div>

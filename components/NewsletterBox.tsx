@@ -49,7 +49,7 @@ export default function NewsletterBox() {
         Daily Intelligence
       </p>
       <h2 className="font-serif font-bold text-white text-2xl md:text-3xl mb-3">
-        The PolicyGlobal Daily Brief
+        The PolicyRix Daily Brief
       </h2>
       <p className="text-slate-400 text-sm max-w-md mx-auto mb-6 leading-relaxed">
         Get the top 5 insurance and finance stories every morning, curated and verified by our

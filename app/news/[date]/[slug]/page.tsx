@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       images: [{ url: article.image_url, alt: article.image_alt }],
       type: 'article',
       publishedTime: article.published_at,
-      authors: ['PolicyGlobal Editorial Desk'],
+      authors: ['PolicyRix Editorial Desk'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -60,10 +60,10 @@ export default function ArticlePage({ params }: { params: Params }) {
     image: article.image_url,
     datePublished: article.published_at,
     dateModified: article.verified_at,
-    author: { '@type': 'Organization', name: 'PolicyGlobal Editorial Desk' },
+    author: { '@type': 'Organization', name: 'PolicyRix Editorial Desk' },
     publisher: {
       '@type': 'Organization',
-      name: 'PolicyGlobal',
+      name: 'PolicyRix',
       logo: { '@type': 'ImageObject', url: 'https://policyrix.com/og-default.png' },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://policyrix.com/news/${params.date}/${params.slug}` },
@@ -194,7 +194,7 @@ export default function ArticlePage({ params }: { params: Params }) {
             <div className="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-800 leading-relaxed">
               <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute
               financial, investment, legal, or insurance advice. Always consult a qualified professional before
-              making financial decisions. PolicyGlobal reports on publicly available information from third-party
+              making financial decisions. PolicyRix reports on publicly available information from third-party
               sources and cannot guarantee the accuracy or completeness of such information.
             </div>
 

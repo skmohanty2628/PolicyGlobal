@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Disclaimer',
-  description: 'PolicyGlobal legal disclaimer — informational content only, not financial advice.',
+  description: 'PolicyRix legal disclaimer — informational content only, not financial advice.',
 };
 
 export default function DisclaimerPage() {
@@ -16,10 +16,10 @@ export default function DisclaimerPage() {
         <h1 className="font-serif font-bold text-4xl">Disclaimer</h1>
       </div>
       <div className="prose max-w-none space-y-5 text-slate-700">
-        <p><strong>Informational Purpose Only.</strong> All content published on PolicyGlobal is for general informational purposes only and does not constitute financial, investment, legal, tax, or insurance advice. Nothing on this website should be construed as a recommendation to buy, sell, or hold any financial product or asset.</p>
-        <p><strong>No Professional Relationship.</strong> Reading this website does not create a financial advisor, attorney, or insurance agent–client relationship between you and PolicyGlobal or any of its contributors.</p>
-        <p><strong>Third-Party Sources.</strong> PolicyGlobal aggregates and summarizes information from publicly available third-party sources. While we make every effort to ensure accuracy, we cannot guarantee the completeness, timeliness, or correctness of any information presented. Original sources should always be consulted.</p>
-        <p><strong>Affiliate &amp; Advertising Disclosure.</strong> PolicyGlobal may earn revenue through display advertising and may in the future include affiliate links. Advertisers do not influence our editorial content. All advertising is clearly labelled.</p>
+        <p><strong>Informational Purpose Only.</strong> All content published on PolicyRix is for general informational purposes only and does not constitute financial, investment, legal, tax, or insurance advice. Nothing on this website should be construed as a recommendation to buy, sell, or hold any financial product or asset.</p>
+        <p><strong>No Professional Relationship.</strong> Reading this website does not create a financial advisor, attorney, or insurance agent–client relationship between you and PolicyRix or any of its contributors.</p>
+        <p><strong>Third-Party Sources.</strong> PolicyRix aggregates and summarizes information from publicly available third-party sources. While we make every effort to ensure accuracy, we cannot guarantee the completeness, timeliness, or correctness of any information presented. Original sources should always be consulted.</p>
+        <p><strong>Affiliate &amp; Advertising Disclosure.</strong> PolicyRix may earn revenue through display advertising and may in the future include affiliate links. Advertisers do not influence our editorial content. All advertising is clearly labelled.</p>
         <p><strong>Forward-Looking Statements.</strong> Some articles may include projections or forecasts from third-party analysts. These are not guarantees of future outcomes and should not be relied upon for decision-making.</p>
         <p><strong>Consult a Professional.</strong> Before making any financial, insurance, or investment decisions, please consult a qualified, licensed professional in your jurisdiction.</p>
         <p className="text-sm text-slate-500">Last updated: June 10, 2026</p>

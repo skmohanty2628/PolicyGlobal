@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'PolicyGlobal Privacy Policy — how we collect, use, and protect your information.',
+  description: 'PolicyRix Privacy Policy — how we collect, use, and protect your information.',
 };
 
 export default function PrivacyPage() {
@@ -17,9 +17,9 @@ export default function PrivacyPage() {
       </div>
       <div className="prose max-w-none space-y-5 text-slate-700">
         {[
-          ['Information We Collect', 'When you visit PolicyGlobal, we may collect non-personal information including your browser type, device type, referring URL, and pages visited. If you subscribe to our newsletter, we collect your email address solely to deliver the newsletter.'],
+          ['Information We Collect', 'When you visit PolicyRix, we may collect non-personal information including your browser type, device type, referring URL, and pages visited. If you subscribe to our newsletter, we collect your email address solely to deliver the newsletter.'],
           ['How We Use Your Information', 'We use collected data to improve our website, personalise your experience, send newsletters you have requested, and analyse traffic patterns. We do not sell or rent your personal information to third parties.'],
-          ['Cookies', 'PolicyGlobal uses cookies for essential functionality and analytics. You can disable cookies in your browser settings, though some features may not function correctly.'],
+          ['Cookies', 'PolicyRix uses cookies for essential functionality and analytics. You can disable cookies in your browser settings, though some features may not function correctly.'],
           ['Third-Party Services', 'We may use third-party analytics services (such as Google Analytics) and advertising networks. These services may collect data according to their own privacy policies. We do not control how these services use your data.'],
           ['Data Security', 'We implement industry-standard security measures to protect your information. However, no internet transmission is 100% secure, and we cannot guarantee absolute security.'],
           ['Your Rights', 'You may request access to, correction of, or deletion of any personal information we hold about you by contacting us at privacy@policyglobal.com.'],

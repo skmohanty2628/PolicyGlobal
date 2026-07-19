@@ -51,13 +51,13 @@ export default function Header() {
               className="w-9 h-9 rounded flex items-center justify-center text-navy-900 font-bold text-base"
               style={{ background: 'linear-gradient(135deg, #E0B84A, #F0D080)' }}
             >
-              PG
+              PR
             </div>
             <div>
               <p
                 className="font-serif font-bold text-white text-xl leading-none tracking-wide group-hover:text-gold-400 transition-colors"
               >
-                PolicyGlobal
+                PolicyRix
               </p>
               <p className="text-gold-500 text-[10px] font-mono uppercase tracking-widest">
                 Insurance &amp; Finance Intelligence

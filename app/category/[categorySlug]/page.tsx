@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { categorySlug: str
   const label = slugToLabel(params.categorySlug);
   return {
     title: `${label} News`,
-    description: `Latest verified ${label} news from PolicyGlobal — global coverage across insurance, finance, and regulation.`,
+    description: `Latest verified ${label} news from PolicyRix — global coverage across insurance, finance, and regulation.`,
   };
 }
 

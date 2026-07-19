@@ -33,7 +33,7 @@ export default function HomePage() {
               Global Insurance &amp; Finance Intelligence
             </p>
             <h1 className="font-serif font-bold text-white text-3xl md:text-5xl leading-tight mb-3">
-              The PolicyGlobal Daily Brief
+              The PolicyRix Daily Brief
             </h1>
             <p className="text-slate-400 text-sm max-w-xl mx-auto">
               Verified news on insurance, banking, finance, and markets — from trusted global sources.

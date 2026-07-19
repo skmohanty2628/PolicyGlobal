@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
-  title: 'Contact PolicyGlobal',
-  description: 'Contact the PolicyGlobal editorial team for news tips, corrections, or advertising inquiries.',
+  title: 'Contact PolicyRix',
+  description: 'Contact the PolicyRix editorial team for news tips, corrections, or advertising inquiries.',
 };
 
 export default function ContactPage() {

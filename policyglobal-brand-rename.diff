@@ -1,0 +1,298 @@
+diff --git a/app/about/page.tsx b/app/about/page.tsx
+index 49ab4c5..a154c1e 100644
+--- a/app/about/page.tsx
++++ b/app/about/page.tsx
+@@ -3,8 +3,8 @@ import Link from 'next/link';
+ import Breadcrumbs from '@/components/Breadcrumbs';
+ 
+ export const metadata: Metadata = {
+-  title: 'About PolicyGlobal',
+-  description: 'Learn about PolicyGlobal — our mission, editorial standards, and approach to verified global insurance and finance news.',
++  title: 'About PolicyRix',
++  description: 'Learn about PolicyRix — our mission, editorial standards, and approach to verified global insurance and finance news.',
+ };
+ 
+ export default function AboutPage() {
+@@ -15,12 +15,12 @@ export default function AboutPage() {
+       <div className="mt-6 mb-10 rounded-2xl p-8 text-white"
+         style={{ background: 'linear-gradient(135deg, #0A1628 0%, #162444 100%)', border: '1px solid rgba(201,168,76,0.2)' }}>
+         <p className="text-gold-400 font-mono text-xs uppercase tracking-widest mb-2">Who We Are</p>
+-        <h1 className="font-serif font-bold text-4xl">About PolicyGlobal</h1>
++        <h1 className="font-serif font-bold text-4xl">About PolicyRix</h1>
+       </div>
+ 
+       <div className="prose prose-lg max-w-none space-y-6 text-slate-700">
+         <p className="text-lg leading-relaxed">
+-          <strong>PolicyGlobal</strong> is an independent global news and intelligence platform dedicated to covering the insurance and finance industries with accuracy, depth, and trust. We believe every person — whether a consumer comparing auto insurance, a CFO assessing reinsurance risk, or a regulator tracking global capital flows — deserves clear, verified, and actionable financial news.
++          <strong>PolicyRix</strong> is an independent global news and intelligence platform dedicated to covering the insurance and finance industries with accuracy, depth, and trust. We believe every person — whether a consumer comparing auto insurance, a CFO assessing reinsurance risk, or a regulator tracking global capital flows — deserves clear, verified, and actionable financial news.
+         </p>
+ 
+         <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
+@@ -47,12 +47,12 @@ export default function AboutPage() {
+         <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
+           Our Coverage
+         </h2>
+-        <p>PolicyGlobal covers the full spectrum of the global insurance and finance ecosystem: auto, life, health, and property insurance; banking and monetary policy; fintech and digital payments; capital markets regulation; loans and mortgages; and macroeconomic policy across 20+ countries.</p>
++        <p>PolicyRix covers the full spectrum of the global insurance and finance ecosystem: auto, life, health, and property insurance; banking and monetary policy; fintech and digital payments; capital markets regulation; loans and mortgages; and macroeconomic policy across 20+ countries.</p>
+ 
+         <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
+           Advertising
+         </h2>
+-        <p>PolicyGlobal is advertising-supported. Advertisers do not influence our editorial decisions. All ad placements are clearly labelled as advertisements. We do not accept sponsored content that is presented as editorial news.</p>
++        <p>PolicyRix is advertising-supported. Advertisers do not influence our editorial decisions. All ad placements are clearly labelled as advertisements. We do not accept sponsored content that is presented as editorial news.</p>
+ 
+         <div className="mt-8 flex gap-4 flex-wrap">
+           <Link href="/contact" className="px-5 py-2.5 rounded-lg font-bold text-sm text-navy-900"
+diff --git a/app/category/[categorySlug]/page.tsx b/app/category/[categorySlug]/page.tsx
+index 710fa06..b0c9b62 100644
+--- a/app/category/[categorySlug]/page.tsx
++++ b/app/category/[categorySlug]/page.tsx
+@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { categorySlug: str
+   const label = slugToLabel(params.categorySlug);
+   return {
+     title: `${label} News`,
+-    description: `Latest verified ${label} news from PolicyGlobal — global coverage across insurance, finance, and regulation.`,
++    description: `Latest verified ${label} news from PolicyRix — global coverage across insurance, finance, and regulation.`,
+   };
+ }
+ 
+diff --git a/app/contact/page.tsx b/app/contact/page.tsx
+index e1ea5d7..8b8a7ea 100644
+--- a/app/contact/page.tsx
++++ b/app/contact/page.tsx
+@@ -2,8 +2,8 @@ import { Metadata } from 'next';
+ import Breadcrumbs from '@/components/Breadcrumbs';
+ 
+ export const metadata: Metadata = {
+-  title: 'Contact PolicyGlobal',
+-  description: 'Contact the PolicyGlobal editorial team for news tips, corrections, or advertising inquiries.',
++  title: 'Contact PolicyRix',
++  description: 'Contact the PolicyRix editorial team for news tips, corrections, or advertising inquiries.',
+ };
+ 
+ export default function ContactPage() {
+diff --git a/app/country/[countrySlug]/page.tsx b/app/country/[countrySlug]/page.tsx
+index c27d1d6..d37b6ee 100644
+--- a/app/country/[countrySlug]/page.tsx
++++ b/app/country/[countrySlug]/page.tsx
+@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { countrySlug: stri
+   const label = COUNTRIES.find((c) => c.slug === params.countrySlug)?.label ?? slugToLabel(params.countrySlug);
+   return {
+     title: `${label} Insurance & Finance News`,
+-    description: `Latest verified insurance and finance news from ${label} — PolicyGlobal global coverage.`,
++    description: `Latest verified insurance and finance news from ${label} — PolicyRix global coverage.`,
+   };
+ }
+ 
+diff --git a/app/daily/[date]/page.tsx b/app/daily/[date]/page.tsx
+index 8460e20..1047853 100644
+--- a/app/daily/[date]/page.tsx
++++ b/app/daily/[date]/page.tsx
+@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { date: string } })
+   const display = formatDate(params.date);
+   return {
+     title: `Daily Brief: ${display}`,
+-    description: `All insurance and finance news from PolicyGlobal for ${display}. Verified stories from global sources.`,
++    description: `All insurance and finance news from PolicyRix for ${display}. Verified stories from global sources.`,
+   };
+ }
+ 
+diff --git a/app/disclaimer/page.tsx b/app/disclaimer/page.tsx
+index 0431350..b5c2ecf 100644
+--- a/app/disclaimer/page.tsx
++++ b/app/disclaimer/page.tsx
+@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
+ 
+ export const metadata: Metadata = {
+   title: 'Disclaimer',
+-  description: 'PolicyGlobal legal disclaimer — informational content only, not financial advice.',
++  description: 'PolicyRix legal disclaimer — informational content only, not financial advice.',
+ };
+ 
+ export default function DisclaimerPage() {
+@@ -16,10 +16,10 @@ export default function DisclaimerPage() {
+         <h1 className="font-serif font-bold text-4xl">Disclaimer</h1>
+       </div>
+       <div className="prose max-w-none space-y-5 text-slate-700">
+-        <p><strong>Informational Purpose Only.</strong> All content published on PolicyGlobal is for general informational purposes only and does not constitute financial, investment, legal, tax, or insurance advice. Nothing on this website should be construed as a recommendation to buy, sell, or hold any financial product or asset.</p>
+-        <p><strong>No Professional Relationship.</strong> Reading this website does not create a financial advisor, attorney, or insurance agent–client relationship between you and PolicyGlobal or any of its contributors.</p>
+-        <p><strong>Third-Party Sources.</strong> PolicyGlobal aggregates and summarizes information from publicly available third-party sources. While we make every effort to ensure accuracy, we cannot guarantee the completeness, timeliness, or correctness of any information presented. Original sources should always be consulted.</p>
+-        <p><strong>Affiliate &amp; Advertising Disclosure.</strong> PolicyGlobal may earn revenue through display advertising and may in the future include affiliate links. Advertisers do not influence our editorial content. All advertising is clearly labelled.</p>
++        <p><strong>Informational Purpose Only.</strong> All content published on PolicyRix is for general informational purposes only and does not constitute financial, investment, legal, tax, or insurance advice. Nothing on this website should be construed as a recommendation to buy, sell, or hold any financial product or asset.</p>
++        <p><strong>No Professional Relationship.</strong> Reading this website does not create a financial advisor, attorney, or insurance agent–client relationship between you and PolicyRix or any of its contributors.</p>
++        <p><strong>Third-Party Sources.</strong> PolicyRix aggregates and summarizes information from publicly available third-party sources. While we make every effort to ensure accuracy, we cannot guarantee the completeness, timeliness, or correctness of any information presented. Original sources should always be consulted.</p>
++        <p><strong>Affiliate &amp; Advertising Disclosure.</strong> PolicyRix may earn revenue through display advertising and may in the future include affiliate links. Advertisers do not influence our editorial content. All advertising is clearly labelled.</p>
+         <p><strong>Forward-Looking Statements.</strong> Some articles may include projections or forecasts from third-party analysts. These are not guarantees of future outcomes and should not be relied upon for decision-making.</p>
+         <p><strong>Consult a Professional.</strong> Before making any financial, insurance, or investment decisions, please consult a qualified, licensed professional in your jurisdiction.</p>
+         <p className="text-sm text-slate-500">Last updated: June 10, 2026</p>
+diff --git a/app/news/[date]/[slug]/page.tsx b/app/news/[date]/[slug]/page.tsx
+index d58e1c5..f44b307 100644
+--- a/app/news/[date]/[slug]/page.tsx
++++ b/app/news/[date]/[slug]/page.tsx
+@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
+       images: [{ url: article.image_url, alt: article.image_alt }],
+       type: 'article',
+       publishedTime: article.published_at,
+-      authors: ['PolicyGlobal Editorial Desk'],
++      authors: ['PolicyRix Editorial Desk'],
+     },
+     twitter: {
+       card: 'summary_large_image',
+@@ -60,10 +60,10 @@ export default function ArticlePage({ params }: { params: Params }) {
+     image: article.image_url,
+     datePublished: article.published_at,
+     dateModified: article.verified_at,
+-    author: { '@type': 'Organization', name: 'PolicyGlobal Editorial Desk' },
++    author: { '@type': 'Organization', name: 'PolicyRix Editorial Desk' },
+     publisher: {
+       '@type': 'Organization',
+-      name: 'PolicyGlobal',
++      name: 'PolicyRix',
+       logo: { '@type': 'ImageObject', url: 'https://policyrix.com/og-default.png' },
+     },
+     mainEntityOfPage: { '@type': 'WebPage', '@id': `https://policyrix.com/news/${params.date}/${params.slug}` },
+@@ -194,7 +194,7 @@ export default function ArticlePage({ params }: { params: Params }) {
+             <div className="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-800 leading-relaxed">
+               <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute
+               financial, investment, legal, or insurance advice. Always consult a qualified professional before
+-              making financial decisions. PolicyGlobal reports on publicly available information from third-party
++              making financial decisions. PolicyRix reports on publicly available information from third-party
+               sources and cannot guarantee the accuracy or completeness of such information.
+             </div>
+ 
+diff --git a/app/page.tsx b/app/page.tsx
+index 018b1ad..cbe99d5 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -33,7 +33,7 @@ export default function HomePage() {
+               Global Insurance &amp; Finance Intelligence
+             </p>
+             <h1 className="font-serif font-bold text-white text-3xl md:text-5xl leading-tight mb-3">
+-              The PolicyGlobal Daily Brief
++              The PolicyRix Daily Brief
+             </h1>
+             <p className="text-slate-400 text-sm max-w-xl mx-auto">
+               Verified news on insurance, banking, finance, and markets — from trusted global sources.
+diff --git a/app/privacy-policy/page.tsx b/app/privacy-policy/page.tsx
+index 1e93965..81a6b45 100644
+--- a/app/privacy-policy/page.tsx
++++ b/app/privacy-policy/page.tsx
+@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
+ 
+ export const metadata: Metadata = {
+   title: 'Privacy Policy',
+-  description: 'PolicyGlobal Privacy Policy — how we collect, use, and protect your information.',
++  description: 'PolicyRix Privacy Policy — how we collect, use, and protect your information.',
+ };
+ 
+ export default function PrivacyPage() {
+@@ -17,9 +17,9 @@ export default function PrivacyPage() {
+       </div>
+       <div className="prose max-w-none space-y-5 text-slate-700">
+         {[
+-          ['Information We Collect', 'When you visit PolicyGlobal, we may collect non-personal information including your browser type, device type, referring URL, and pages visited. If you subscribe to our newsletter, we collect your email address solely to deliver the newsletter.'],
++          ['Information We Collect', 'When you visit PolicyRix, we may collect non-personal information including your browser type, device type, referring URL, and pages visited. If you subscribe to our newsletter, we collect your email address solely to deliver the newsletter.'],
+           ['How We Use Your Information', 'We use collected data to improve our website, personalise your experience, send newsletters you have requested, and analyse traffic patterns. We do not sell or rent your personal information to third parties.'],
+-          ['Cookies', 'PolicyGlobal uses cookies for essential functionality and analytics. You can disable cookies in your browser settings, though some features may not function correctly.'],
++          ['Cookies', 'PolicyRix uses cookies for essential functionality and analytics. You can disable cookies in your browser settings, though some features may not function correctly.'],
+           ['Third-Party Services', 'We may use third-party analytics services (such as Google Analytics) and advertising networks. These services may collect data according to their own privacy policies. We do not control how these services use your data.'],
+           ['Data Security', 'We implement industry-standard security measures to protect your information. However, no internet transmission is 100% secure, and we cannot guarantee absolute security.'],
+           ['Your Rights', 'You may request access to, correction of, or deletion of any personal information we hold about you by contacting us at privacy@policyglobal.com.'],
+diff --git a/app/terms/page.tsx b/app/terms/page.tsx
+index aad6d0f..8282e37 100644
+--- a/app/terms/page.tsx
++++ b/app/terms/page.tsx
+@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
+ 
+ export const metadata: Metadata = {
+   title: 'Terms of Use',
+-  description: 'PolicyGlobal Terms of Use — the rules governing your use of our website and content.',
++  description: 'PolicyRix Terms of Use — the rules governing your use of our website and content.',
+ };
+ 
+ export default function TermsPage() {
+@@ -17,11 +17,11 @@ export default function TermsPage() {
+       </div>
+       <div className="prose max-w-none space-y-5 text-slate-700">
+         {[
+-          ['Acceptance of Terms', 'By accessing or using PolicyGlobal, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.'],
+-          ['Content Use', 'All content on PolicyGlobal is protected by copyright. You may read and share articles for personal, non-commercial purposes with attribution. Republication, modification, or commercial use of our content without prior written permission is prohibited.'],
+-          ['No Financial Advice', 'Nothing on PolicyGlobal constitutes financial, investment, insurance, or legal advice. See our full Disclaimer for details.'],
+-          ['Third-Party Links', 'PolicyGlobal links to third-party sources for attribution and reader reference. We are not responsible for the content, accuracy, or privacy practices of linked websites.'],
+-          ['Limitation of Liability', 'PolicyGlobal and its contributors are not liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any content published here.'],
++          ['Acceptance of Terms', 'By accessing or using PolicyRix, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.'],
++          ['Content Use', 'All content on PolicyRix is protected by copyright. You may read and share articles for personal, non-commercial purposes with attribution. Republication, modification, or commercial use of our content without prior written permission is prohibited.'],
++          ['No Financial Advice', 'Nothing on PolicyRix constitutes financial, investment, insurance, or legal advice. See our full Disclaimer for details.'],
++          ['Third-Party Links', 'PolicyRix links to third-party sources for attribution and reader reference. We are not responsible for the content, accuracy, or privacy practices of linked websites.'],
++          ['Limitation of Liability', 'PolicyRix and its contributors are not liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any content published here.'],
+           ['Governing Law', 'These Terms are governed by applicable law. Disputes shall be subject to the exclusive jurisdiction of the competent courts.'],
+           ['Modifications', 'We reserve the right to modify these Terms at any time. Continued use of the website following any changes constitutes acceptance of the revised Terms.'],
+         ].map(([title, body]) => (
+diff --git a/components/Footer.tsx b/components/Footer.tsx
+index b218c0f..3733498 100644
+--- a/components/Footer.tsx
++++ b/components/Footer.tsx
+@@ -37,7 +37,7 @@ export default function Footer() {
+                 style={{ background: 'linear-gradient(135deg, #E0B84A, #F0D080)' }}>
+                 PG
+               </div>
+-              <span className="font-serif font-bold text-white text-lg">PolicyGlobal</span>
++              <span className="font-serif font-bold text-white text-lg">PolicyRix</span>
+             </div>
+             <p className="text-slate-400 text-sm leading-relaxed mb-4">
+               Your trusted source for global insurance and finance intelligence. Coverage spanning
+@@ -103,18 +103,18 @@ export default function Footer() {
+         {/* Disclaimer */}
+         <div className="border-t border-navy-700 pt-6 mb-6" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+           <p className="text-slate-500 text-xs leading-relaxed">
+-            <strong className="text-slate-400">Important Disclaimer:</strong> PolicyGlobal publishes
++            <strong className="text-slate-400">Important Disclaimer:</strong> PolicyRix publishes
+             informational news and analysis sourced from publicly available, verified third-party
+             sources. Nothing on this website constitutes financial, investment, legal, or insurance
+             advice. Always consult a qualified professional before making financial decisions.
+-            PolicyGlobal is not affiliated with any insurance company, financial institution, or
++            PolicyRix is not affiliated with any insurance company, financial institution, or
+             government regulatory body. We may display advertising; advertisers do not influence
+             our editorial content.
+           </p>
+         </div>
+ 
+         <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+-          <p>© {currentYear} PolicyGlobal. All rights reserved.</p>
++          <p>© {currentYear} PolicyRix. All rights reserved.</p>
+           <p className="font-mono">Verified · Independent · Informational</p>
+         </div>
+       </div>
+diff --git a/components/Header.tsx b/components/Header.tsx
+index 67f5006..76308b9 100644
+--- a/components/Header.tsx
++++ b/components/Header.tsx
+@@ -51,13 +51,13 @@ export default function Header() {
+               className="w-9 h-9 rounded flex items-center justify-center text-navy-900 font-bold text-base"
+               style={{ background: 'linear-gradient(135deg, #E0B84A, #F0D080)' }}
+             >
+-              PG
++              PR
+             </div>
+             <div>
+               <p
+                 className="font-serif font-bold text-white text-xl leading-none tracking-wide group-hover:text-gold-400 transition-colors"
+               >
+-                PolicyGlobal
++                PolicyRix
+               </p>
+               <p className="text-gold-500 text-[10px] font-mono uppercase tracking-widest">
+                 Insurance &amp; Finance Intelligence
+diff --git a/components/NewsletterBox.tsx b/components/NewsletterBox.tsx
+index 9126d53..30b5f03 100644
+--- a/components/NewsletterBox.tsx
++++ b/components/NewsletterBox.tsx
+@@ -49,7 +49,7 @@ export default function NewsletterBox() {
+         Daily Intelligence
+       </p>
+       <h2 className="font-serif font-bold text-white text-2xl md:text-3xl mb-3">
+-        The PolicyGlobal Daily Brief
++        The PolicyRix Daily Brief
+       </h2>
+       <p className="text-slate-400 text-sm max-w-md mx-auto mb-6 leading-relaxed">
+         Get the top 5 insurance and finance stories every morning, curated and verified by our

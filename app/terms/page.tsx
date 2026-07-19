@@ -3,7 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Terms of Use',
-  description: 'PolicyGlobal Terms of Use — the rules governing your use of our website and content.',
+  description: 'PolicyRix Terms of Use — the rules governing your use of our website and content.',
 };
 
 export default function TermsPage() {
@@ -17,11 +17,11 @@ export default function TermsPage() {
       </div>
       <div className="prose max-w-none space-y-5 text-slate-700">
         {[
-          ['Acceptance of Terms', 'By accessing or using PolicyGlobal, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.'],
-          ['Content Use', 'All content on PolicyGlobal is protected by copyright. You may read and share articles for personal, non-commercial purposes with attribution. Republication, modification, or commercial use of our content without prior written permission is prohibited.'],
-          ['No Financial Advice', 'Nothing on PolicyGlobal constitutes financial, investment, insurance, or legal advice. See our full Disclaimer for details.'],
-          ['Third-Party Links', 'PolicyGlobal links to third-party sources for attribution and reader reference. We are not responsible for the content, accuracy, or privacy practices of linked websites.'],
-          ['Limitation of Liability', 'PolicyGlobal and its contributors are not liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any content published here.'],
+          ['Acceptance of Terms', 'By accessing or using PolicyRix, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.'],
+          ['Content Use', 'All content on PolicyRix is protected by copyright. You may read and share articles for personal, non-commercial purposes with attribution. Republication, modification, or commercial use of our content without prior written permission is prohibited.'],
+          ['No Financial Advice', 'Nothing on PolicyRix constitutes financial, investment, insurance, or legal advice. See our full Disclaimer for details.'],
+          ['Third-Party Links', 'PolicyRix links to third-party sources for attribution and reader reference. We are not responsible for the content, accuracy, or privacy practices of linked websites.'],
+          ['Limitation of Liability', 'PolicyRix and its contributors are not liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on any content published here.'],
           ['Governing Law', 'These Terms are governed by applicable law. Disputes shall be subject to the exclusive jurisdiction of the competent courts.'],
           ['Modifications', 'We reserve the right to modify these Terms at any time. Continued use of the website following any changes constitutes acceptance of the revised Terms.'],
         ].map(([title, body]) => (
