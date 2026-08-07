@@ -82,6 +82,11 @@ export function getAllDates(): string[] {
     .readdirSync(NEWS_DIR)
     .filter((f) => f.endsWith('.json'))
     .map((f) => f.replace('.json', ''))
+    // ✅ Bug 3 Fixed: exclude dates with an empty (or missing) article array so we
+    // never statically generate a live page with zero publisher-content.
+    // This directly matches AdSense's "Google-served ads on screens without
+    // publisher-content" policy — empty daily pages were being generated before.
+    .filter((date) => readJsonFile(path.join(NEWS_DIR, `${date}.json`)).length > 0)
     .sort()
     .reverse();
 }
