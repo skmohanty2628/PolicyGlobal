@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CATEGORIES, COUNTRIES } from '@/lib/constants';
+import { getActiveCategories, getActiveCountries } from '@/lib/news';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,7 +52,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Categories</h4>
             <ul className="space-y-2">
-              {CATEGORIES.map((c) => (
+              {getActiveCategories().map((c) => (
                 <li key={c.slug}>
                   <Link href={`/category/${c.slug}`}
                     className="text-slate-400 hover:text-gold-400 text-sm transition-colors">
@@ -67,7 +67,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">By Country</h4>
             <ul className="space-y-2">
-              {COUNTRIES.map((c) => (
+              {getActiveCountries().map((c) => (
                 <li key={c.slug}>
                   <Link href={`/country/${c.slug}`}
                     className="text-slate-400 hover:text-gold-400 text-sm transition-colors">

@@ -5,7 +5,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
-import { getLatestNews, getAllDates } from '@/lib/news';
+import { getLatestNews, getAllDates, getActiveCategories, getActiveCountries } from '@/lib/news';
 import { countryFlag } from '@/lib/constants';
 
 // Public publisher ID (also published in /ads.txt). Env var overrides it.
@@ -109,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
-        <Header tickerItems={tickerItems} latestDate={latestDate} />
+        <Header tickerItems={tickerItems} latestDate={latestDate} categories={getActiveCategories()} countries={getActiveCountries()} />
         <main className="flex-1 animate-fade-in">
           {children}
         </main>

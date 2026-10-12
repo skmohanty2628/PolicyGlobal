@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getNewsByCountry } from '@/lib/news';
+import { getNewsByCountry, getActiveCountries } from '@/lib/news';
 import { COUNTRIES, slugToLabel } from '@/lib/constants';
 import NewsCard from '@/components/NewsCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -8,7 +8,7 @@ import AdSlot from '@/components/AdSlot';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
-  return COUNTRIES.map((c) => ({ countrySlug: c.slug }));
+  return getActiveCountries().map((c) => ({ countrySlug: c.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { countrySlug: string } }): Promise<Metadata> {
@@ -23,6 +23,7 @@ export default function CountryPage({ params }: { params: { countrySlug: string 
   const country = COUNTRIES.find((c) => c.slug === params.countrySlug);
   const label = country?.label ?? slugToLabel(params.countrySlug);
   const articles = getNewsByCountry(params.countrySlug);
+  if (articles.length === 0) notFound();
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -53,7 +54,7 @@ export default function CountryPage({ params }: { params: { countrySlug: string 
           Other Countries
         </h2>
         <div className="flex flex-wrap gap-2">
-          {COUNTRIES.filter((c) => c.slug !== params.countrySlug).map((c) => (
+          {getActiveCountries().filter((c) => c.slug !== params.countrySlug).map((c) => (
             <Link key={c.slug} href={`/country/${c.slug}`}
               className="text-xs font-semibold px-3 py-1.5 rounded-full border hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all"
               style={{ borderColor: '#E2E8F0', color: '#475569' }}>

@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllNews, getAllDates } from '@/lib/news';
-import { CATEGORIES, COUNTRIES } from '@/lib/constants';
+import { getAllNews, getAllDates, getActiveCategories, getActiveCountries } from '@/lib/news';
 import { GUIDES } from '@/lib/guides';
 import { TOOLS } from '@/lib/tools';
 
@@ -36,14 +35,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const categoryPages: MetadataRoute.Sitemap = CATEGORIES.map((c) => ({
+  const categoryPages: MetadataRoute.Sitemap = getActiveCategories().map((c) => ({
     url: `${base}/category/${c.slug.replace(/&/g, 'and')}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.6,
   }));
 
-  const countryPages: MetadataRoute.Sitemap = COUNTRIES.map((c) => ({
+  const countryPages: MetadataRoute.Sitemap = getActiveCountries().map((c) => ({
     url: `${base}/country/${c.slug.replace(/&/g, 'and')}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,

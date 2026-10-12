@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { CATEGORIES, COUNTRIES } from './constants';
 export { CATEGORIES, COUNTRIES, formatDate, slugToLabel } from './constants';
 
 export interface NewsArticle {
@@ -99,4 +100,17 @@ export function getRelatedNews(article: NewsArticle, limit = 4): NewsArticle[] {
         (a.category === article.category || a.country === article.country)
     )
     .slice(0, limit);
+}
+const norm = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-');
+
+/** Categories that currently have at least one article (never link to empty pages). */
+export function getActiveCategories() {
+  const used = new Set(getAllNews().map((a) => norm(a.category)));
+  return CATEGORIES.filter((c) => used.has(norm(c.label)));
+}
+
+/** Countries that currently have at least one article. */
+export function getActiveCountries() {
+  const used = new Set(getAllNews().map((a) => norm(a.country)));
+  return COUNTRIES.filter((c) => used.has(norm(c.label)));
 }

@@ -1,4 +1,4 @@
-import { getLatestNews, getAllDates } from '@/lib/news';
+import { getLatestNews, getAllDates, getActiveCategories, getActiveCountries } from '@/lib/news';
 import { CATEGORIES, COUNTRIES, countryFlag, formatDate } from '@/lib/constants';
 import { GUIDES } from '@/lib/guides';
 import { TOOLS } from '@/lib/tools';
@@ -162,7 +162,7 @@ export default function HomePage() {
                 Browse Categories
               </h3>
               <div className="flex flex-wrap gap-2">
-                {CATEGORIES.map((c) => (
+                {getActiveCategories().map((c) => (
                   <Link key={c.slug} href={`/category/${c.slug}`}
                     className="text-xs font-semibold px-3 py-1.5 rounded-full border transition-all hover:bg-navy-900 hover:text-white hover:border-navy-900"
                     style={{ borderColor: '#E2E8F0', color: '#475569' }}>
@@ -180,7 +180,7 @@ export default function HomePage() {
                 Browse by Country
               </h3>
               <div className="space-y-1.5">
-                {COUNTRIES.map((c) => (
+                {getActiveCountries().map((c) => (
                   <Link key={c.slug} href={`/country/${c.slug}`}
                     className="flex items-center gap-2 py-1.5 px-2 rounded-lg hover:bg-gray-50 transition-colors text-sm text-slate-600 hover:text-navy-900">
                     {c.label}

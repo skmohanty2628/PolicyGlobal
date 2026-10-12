@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState } from 'react';
-import { CATEGORIES, COUNTRIES } from '@/lib/constants';
+type NavItem = { label: string; slug: string };
 
 const STATIC_NAV = [
   { label: 'Home', href: '/' },
@@ -13,9 +13,11 @@ const STATIC_NAV = [
 interface HeaderProps {
   tickerItems: string[];
   latestDate: string;
+  categories: NavItem[];
+  countries: NavItem[];
 }
 
-export default function Header({ tickerItems, latestDate }: HeaderProps) {
+export default function Header({ tickerItems, latestDate, categories: CATEGORIES, countries: COUNTRIES }: HeaderProps) {
   const NAV_LINKS = [
     STATIC_NAV[0],
     { label: 'Daily Archive', href: latestDate ? `/daily/${latestDate}` : '/' },

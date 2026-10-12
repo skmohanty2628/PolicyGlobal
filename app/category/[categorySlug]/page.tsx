@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getNewsByCategory } from '@/lib/news';
+import { getNewsByCategory, getActiveCategories } from '@/lib/news';
 import { CATEGORIES, slugToLabel } from '@/lib/constants';
 import NewsCard from '@/components/NewsCard';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -8,7 +8,7 @@ import AdSlot from '@/components/AdSlot';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
-  return CATEGORIES.map((c) => ({ categorySlug: c.slug }));
+  return getActiveCategories().map((c) => ({ categorySlug: c.slug }));
 }
 
 export async function generateMetadata({ params }: { params: { categorySlug: string } }): Promise<Metadata> {
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: { categorySlug: str
 export default function CategoryPage({ params }: { params: { categorySlug: string } }) {
   const label = CATEGORIES.find((c) => c.slug === params.categorySlug)?.label ?? slugToLabel(params.categorySlug);
   const articles = getNewsByCategory(params.categorySlug);
+  if (articles.length === 0) notFound();
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -53,7 +54,7 @@ export default function CategoryPage({ params }: { params: { categorySlug: strin
           Other Categories
         </h2>
         <div className="flex flex-wrap gap-2">
-          {CATEGORIES.filter((c) => c.slug !== params.categorySlug).map((c) => (
+          {getActiveCategories().filter((c) => c.slug !== params.categorySlug).map((c) => (
             <Link key={c.slug} href={`/category/${c.slug}`}
               className="text-xs font-semibold px-3 py-1.5 rounded-full border hover:bg-navy-900 hover:text-white hover:border-navy-900 transition-all"
               style={{ borderColor: '#E2E8F0', color: '#475569' }}>
