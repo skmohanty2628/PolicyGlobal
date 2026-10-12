@@ -47,7 +47,21 @@ export default function AboutPage() {
         <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
           Our Coverage
         </h2>
-        <p>PolicyRix covers the full spectrum of the global insurance and finance ecosystem: auto, life, health, and property insurance; banking and monetary policy; fintech and digital payments; capital markets regulation; loans and mortgages; and macroeconomic policy across 20+ countries.</p>
+        <p>PolicyRix covers the full spectrum of the global insurance and finance ecosystem: auto, life, health, and property insurance; banking and monetary policy; fintech and digital payments; capital markets regulation; loans and mortgages; and macroeconomic policy across 11 markets: the United States, India, the United Kingdom, Canada, Australia, the UAE, Singapore, Germany, France, Japan and South Korea.</p>
+
+        <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
+          What You Will Find Here
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li><strong>Daily Brief</strong> — the day’s key insurance and finance developments, each written up with context and linked to its original source.</li>
+          <li><strong>Guides</strong> — plain-English explainers on how insurance, mortgages and personal finance products actually work. <Link href="/guides" className="underline">Browse guides</Link>.</li>
+          <li><strong>Free tools</strong> — calculators for loan payments, life-insurance cover and deductible choices that run privately in your browser. <Link href="/tools" className="underline">Use the tools</Link>.</li>
+        </ul>
+
+        <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
+          Corrections
+        </h2>
+        <p>If you spot an error, tell us at <a href="mailto:editorial@policyrix.com" className="underline">editorial@policyrix.com</a>. We correct confirmed mistakes promptly and note material changes on the article.</p>
 
         <h2 className="font-serif font-bold text-navy-900 text-2xl mt-8 mb-4" style={{ color: '#0A1628' }}>
           Advertising

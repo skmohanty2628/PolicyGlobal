@@ -11,6 +11,8 @@ import RelatedNews from '@/components/RelatedNews';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdSlot from '@/components/AdSlot';
 import NewsletterBox from '@/components/NewsletterBox';
+import ShareButtons from '@/components/ShareButtons';
+import ReadingProgress from '@/components/ReadingProgress';
 
 interface Params { date: string; slug: string; }
 
@@ -30,6 +32,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: article.title,
     description: article.summary,
+    alternates: { canonical: `/news/${params.date}/${params.slug}` },
     openGraph: {
       title: article.title,
       description: article.summary,
@@ -60,7 +63,7 @@ export default function ArticlePage({ params }: { params: Params }) {
     image: article.image_url,
     datePublished: article.published_at,
     dateModified: article.verified_at,
-    author: { '@type': 'Organization', name: 'PolicyRix Editorial Desk' },
+    author: { '@type': 'Organization', name: 'PolicyRix Editorial', url: 'https://policyrix.com/masthead' },
     publisher: {
       '@type': 'Organization',
       name: 'PolicyRix',
@@ -71,6 +74,7 @@ export default function ArticlePage({ params }: { params: Params }) {
 
   return (
     <>
+      <ReadingProgress />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero Image */}
@@ -110,12 +114,13 @@ export default function ArticlePage({ params }: { params: Params }) {
 
             <div className="flex flex-wrap items-center gap-4 mt-4 mb-6 pb-6 border-b border-gray-200">
               <div className="text-xs text-slate-500 font-mono">
-                <span className="font-semibold text-slate-700">Editorial Desk</span>
+                <Link href="/masthead" className="font-semibold text-slate-700 hover:underline">PolicyRix Editorial</Link>
                 <span className="mx-2">·</span>
                 <time dateTime={article.published_at}>{formatDate(article.published_at)}</time>
                 <span className="mx-2">·</span>
                 <span>{article.reading_time}</span>
               </div>
+              <ShareButtons url={`https://policyrix.com/news/${params.date}/${params.slug}`} title={article.title} />
               {article.verification_status === 'Verified' && (
                 <span className="verified-badge">
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">

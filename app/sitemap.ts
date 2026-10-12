@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { getAllNews, getAllDates } from '@/lib/news';
 import { CATEGORIES, COUNTRIES } from '@/lib/constants';
+import { GUIDES } from '@/lib/guides';
+import { TOOLS } from '@/lib/tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://policyrix.com';
@@ -10,6 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
+    { url: `${base}/guides`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/tools`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/masthead`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/disclaimer`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
@@ -45,5 +50,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...articlePages, ...dailyPages, ...categoryPages, ...countryPages];
+  const guidePages: MetadataRoute.Sitemap = GUIDES.map((g) => ({
+    url: `${base}/guides/${g.slug}`,
+    lastModified: new Date(g.updated),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  const toolPages: MetadataRoute.Sitemap = TOOLS.map((t) => ({
+    url: `${base}/tools/${t.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...guidePages, ...toolPages, ...articlePages, ...dailyPages, ...categoryPages, ...countryPages];
 }

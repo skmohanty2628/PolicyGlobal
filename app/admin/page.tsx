@@ -58,9 +58,17 @@ export default function AdminPage() {
   const [analytics,      setAnalytics]      = useState<AnalyticsData | null>(null);
   const [analyticsLoading, setAnalyticsLoading] = useState(false);
 
-  const handleLogin = () => {
-    if (password === 'Subham000') { setIsAuthed(true); setAuthError(''); }
-    else { setAuthError('❌ Wrong password'); setPassword(''); }
+  // Password = the REINDEX_SECRET env var. It is verified server-side and never
+  // shipped in the client bundle.
+  const [token, setToken] = useState('');
+  const authHeaders = (): Record<string, string> => ({ Authorization: `Bearer ${token}` });
+
+  const handleLogin = async () => {
+    try {
+      const res = await fetch('/api/reindex', { headers: { Authorization: `Bearer ${password}` } });
+      if (res.ok) { setToken(password); setIsAuthed(true); setAuthError(''); }
+      else { setAuthError('❌ Wrong password'); setPassword(''); }
+    } catch { setAuthError('❌ Network error'); }
   };
 
   useEffect(() => {
@@ -72,7 +80,7 @@ export default function AdminPage() {
   const fetchArticles = async () => {
     setArticlesLoading(true);
     try {
-      const res  = await fetch('/api/recent-articles');
+      const res  = await fetch('/api/recent-articles', { headers: authHeaders() });
       if (!res.ok) throw new Error();
       const json = await res.json();
       setArticles(Array.isArray(json) ? json : Array.isArray(json.articles) ? json.articles : []);
@@ -83,7 +91,7 @@ export default function AdminPage() {
   const fetchAnalytics = async () => {
     setAnalyticsLoading(true);
     try {
-      const res  = await fetch('/api/analytics');
+      const res  = await fetch('/api/analytics', { headers: authHeaders() });
       const data = await res.json();
       setAnalytics(data);
     } catch { setAnalytics(null); }
@@ -97,7 +105,7 @@ export default function AdminPage() {
     try {
       const res  = await fetch('/api/reindex', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Authorization: 'Bearer policyrix2026secret' },
+        headers: { 'Content-Type': 'application/json', ...authHeaders() },
       });
       const data = await res.json();
       if (res.ok) {

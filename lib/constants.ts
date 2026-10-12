@@ -29,7 +29,7 @@ export const COUNTRIES = [
 export function formatDate(dateStr: string): string {
   try {
     const d = new Date(dateStr);
-    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
   } catch {
     return dateStr;
   }
@@ -37,4 +37,14 @@ export function formatDate(dateStr: string): string {
 
 export function slugToLabel(slug: string): string {
   return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+const FLAGS: Record<string, string> = {
+  'United States': '🇺🇸', India: '🇮🇳', 'United Kingdom': '🇬🇧', Canada: '🇨🇦',
+  Australia: '🇦🇺', UAE: '🇦🇪', Singapore: '🇸🇬', Germany: '🇩🇪', France: '🇫🇷',
+  Japan: '🇯🇵', 'South Korea': '🇰🇷',
+};
+
+export function countryFlag(country: string): string {
+  return FLAGS[country] ?? '🌍';
 }

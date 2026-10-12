@@ -4,6 +4,12 @@ import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
+import { getLatestNews, getAllDates } from '@/lib/news';
+import { countryFlag } from '@/lib/constants';
+
+// Public publisher ID (also published in /ads.txt). Env var overrides it.
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || 'ca-pub-7617760862667547';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://policyrix.com'),
@@ -36,7 +42,7 @@ export const metadata: Metadata = {
     siteName: 'PolicyRix',
     title: 'PolicyRix — Global Insurance & Finance News',
     description:
-      'Verified global insurance and finance news — Bloomberg-quality coverage for the insurance-savvy reader.',
+      'Verified global insurance and finance news — daily briefings, plain-English explainers and calculators for insurance and finance readers.',
     images: [
       {
         url: '/og-default.png',
@@ -53,10 +59,14 @@ export const metadata: Metadata = {
       'Verified global insurance and finance news — daily briefings on insurance, banking, fintech, and markets.',
     images: ['/og-default.png'],
   },
+  alternates: { types: { 'application/rss+xml': '/feed.xml' } },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const latest = getLatestNews(10);
+  const tickerItems = latest.map((a) => `${countryFlag(a.country)} ${a.title} — ${a.source_name}`);
+  const latestDate = getAllDates()[0] ?? '';
   return (
     <html lang="en">
       <head>
@@ -73,28 +83,38 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              analytics_storage: 'denied', ad_storage: 'denied',
+              ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500
+            });
+            try {
+              if (localStorage.getItem('pr-consent') === 'granted') {
+                gtag('consent', 'update', {
+                  analytics_storage: 'granted', ad_storage: 'granted',
+                  ad_user_data: 'granted', ad_personalization: 'granted'
+                });
+              }
+            } catch (e) {}
             gtag('js', new Date());
             gtag('config', 'G-LK521ZYKJE');
           `}
         </Script>
 
-        {/* ✅ AdSense verification/ad script */}
-        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT &&
-          process.env.NEXT_PUBLIC_ADSENSE_CLIENT !== 'ca-pub-your-id-here' && (
-            <Script
-              async
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`}
-              crossOrigin="anonymous"
-              strategy="afterInteractive"
-            />
-          )}
+        {/* AdSense: plain <script> in the server-rendered <head> so Google's crawler
+            can verify the site (next/script injects it client-side, which it can miss). */}
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
-        <Header />
+        <Header tickerItems={tickerItems} latestDate={latestDate} />
         <main className="flex-1 animate-fade-in">
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

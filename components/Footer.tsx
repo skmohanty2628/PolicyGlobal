@@ -40,8 +40,8 @@ export default function Footer() {
               <span className="font-serif font-bold text-white text-lg">PolicyRix</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-4">
-              Your trusted source for global insurance and finance intelligence. Coverage spanning
-              120+ countries, verified daily by our editorial desk.
+              Global insurance and finance news, plain-English guides and free calculators.
+              Daily coverage of 11 markets, every story linked to its original source.
             </p>
             <p className="text-gold-500 text-xs font-mono uppercase tracking-widest">
               Est. 2026 · Global Coverage
@@ -84,6 +84,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: 'About Us', href: '/about' },
+                { label: 'Guides', href: '/guides' },
+                { label: 'Free Tools', href: '/tools' },
+                { label: 'RSS Feed', href: '/feed.xml' },
                 { label: 'Masthead', href: '/masthead' },
                 { label: 'Contact', href: '/contact' },
                 { label: 'Disclaimer', href: '/disclaimer' },

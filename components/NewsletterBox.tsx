@@ -52,8 +52,8 @@ export default function NewsletterBox() {
         The PolicyRix Daily Brief
       </h2>
       <p className="text-slate-400 text-sm max-w-md mx-auto mb-6 leading-relaxed">
-        Get the top 5 insurance and finance stories every morning, curated and verified by our
-        editorial desk. No spam. Unsubscribe anytime.
+        Get the day's key insurance and finance stories in one email, each linked to its original
+        source. No spam. Unsubscribe anytime.
       </p>
 
       {/* Success */}

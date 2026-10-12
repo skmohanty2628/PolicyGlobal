@@ -3,27 +3,24 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { CATEGORIES, COUNTRIES } from '@/lib/constants';
 
-const NAV_LINKS = [
+const STATIC_NAV = [
   { label: 'Home', href: '/' },
-  { label: 'Daily Archive', href: '/daily/2026-06-10' },
+  { label: 'Guides', href: '/guides' },
+  { label: 'Tools', href: '/tools' },
   { label: 'About', href: '/about' },
-  { label: 'Disclaimer', href: '/disclaimer' },
 ];
 
-const TICKER_ITEMS = [
-  '🇺🇸 US 30-yr mortgage rate: 6.55% — Bankrate, June 10',
-  '🇯🇵 BOJ June rate hike: 80% market probability — CNBC',
-  '🇮🇳 India opens insurance to 100% FDI under automatic route',
-  '🇺🇸 Fed holds rates at 3.50–3.75% — third consecutive hold',
-  '🌍 Global cyber insurance market: $33.4B projected for 2026',
-  '🇬🇧 FCA: Insurance premium finance APRs down 4.1% since 2022',
-  '🇰🇷 DB Insurance completes $1.65B Fortegra acquisition',
-  '🇺🇸 Medicaid cuts: CBO estimates 11.8M to lose coverage',
-  '🇦🇺 APRA CPS 230 amendments effective July 1, 2026',
-  '🇩🇪 BaFin launches dedicated cyber insurance reporting class',
-];
+interface HeaderProps {
+  tickerItems: string[];
+  latestDate: string;
+}
 
-export default function Header() {
+export default function Header({ tickerItems, latestDate }: HeaderProps) {
+  const NAV_LINKS = [
+    STATIC_NAV[0],
+    { label: 'Daily Archive', href: latestDate ? `/daily/${latestDate}` : '/' },
+    ...STATIC_NAV.slice(1),
+  ];
   const [menuOpen, setMenuOpen] = useState(false);
   const [catOpen, setCatOpen] = useState(false);
   const [cntOpen, setCntOpen] = useState(false);
@@ -33,7 +30,7 @@ export default function Header() {
       {/* ── Ticker ── */}
       <div className="ticker-wrapper py-1.5">
         <div className="ticker-track text-xs font-mono text-gold-400 tracking-wide">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, i) => (
+          {[...tickerItems, ...tickerItems].map((item, i) => (
             <span key={i} className="mx-10">{item}</span>
           ))}
         </div>

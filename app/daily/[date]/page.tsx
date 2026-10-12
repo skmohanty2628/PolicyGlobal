@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: { date: string } })
   const display = formatDate(params.date);
   return {
     title: `Daily Brief: ${display}`,
+    alternates: { canonical: `/daily/${params.date}` },
     description: `All insurance and finance news from PolicyRix for ${display}. Verified stories from global sources.`,
   };
 }
@@ -23,10 +24,14 @@ export default function DailyPage({ params }: { params: { date: string } }) {
   const articles = getNewsByDate(params.date);
   if (!articles.length) notFound();
   const display = formatDate(params.date);
+  const dates = getAllDates(); // newest first
+  const idx = dates.indexOf(params.date);
+  const newer = idx > 0 ? dates[idx - 1] : null;
+  const older = idx >= 0 && idx < dates.length - 1 ? dates[idx + 1] : null;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <Breadcrumbs crumbs={[{ label: 'Daily Archive', href: '#' }, { label: display }]} />
+      <Breadcrumbs crumbs={[{ label: 'Daily Archive', href: '/' }, { label: display }]} />
 
       {/* Header */}
       <div className="mt-6 mb-8 rounded-2xl p-8 text-white"
@@ -45,8 +50,14 @@ export default function DailyPage({ params }: { params: { date: string } }) {
       </div>
 
       {/* Prev / Next nav */}
-      <div className="mt-10 flex justify-between">
-        <Link href="/" className="text-sm font-semibold text-gold-600 hover:underline">← Back to Latest</Link>
+      <div className="mt-10 flex justify-between items-center gap-4 flex-wrap">
+        {older ? (
+          <Link href={`/daily/${older}`} className="text-sm font-semibold text-gold-600 hover:underline">← {formatDate(older)}</Link>
+        ) : <span />}
+        <Link href="/" className="text-sm font-semibold text-slate-500 hover:underline">Back to Latest</Link>
+        {newer ? (
+          <Link href={`/daily/${newer}`} className="text-sm font-semibold text-gold-600 hover:underline">{formatDate(newer)} →</Link>
+        ) : <span />}
       </div>
     </div>
   );

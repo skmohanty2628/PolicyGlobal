@@ -17,20 +17,24 @@ export default function PrivacyPage() {
       </div>
       <div className="prose max-w-none space-y-5 text-slate-700">
         {[
-          ['Information We Collect', 'When you visit PolicyRix, we may collect non-personal information including your browser type, device type, referring URL, and pages visited. If you subscribe to our newsletter, we collect your email address solely to deliver the newsletter.'],
-          ['How We Use Your Information', 'We use collected data to improve our website, personalise your experience, send newsletters you have requested, and analyse traffic patterns. We do not sell or rent your personal information to third parties.'],
-          ['Cookies', 'PolicyRix uses cookies for essential functionality and analytics. You can disable cookies in your browser settings, though some features may not function correctly.'],
-          ['Third-Party Services', 'We may use third-party analytics services (such as Google Analytics) and advertising networks. These services may collect data according to their own privacy policies. We do not control how these services use your data.'],
-          ['Data Security', 'We implement industry-standard security measures to protect your information. However, no internet transmission is 100% secure, and we cannot guarantee absolute security.'],
-          ['Your Rights', 'You may request access to, correction of, or deletion of any personal information we hold about you by contacting us at privacy@policyglobal.com.'],
-          ['Changes to this Policy', 'We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.'],
+          ['Who we are', 'PolicyRix (policyrix.com) is an independent insurance and finance news publication. You can reach us at hello@policyrix.com for any privacy question.'],
+          ['Information We Collect', 'When you visit PolicyRix we collect non-personal technical data such as browser type, device type, approximate location (country/region), referring URL and pages viewed. If you subscribe to our newsletter we collect your email address, and if you use our contact form we collect the name, email address and message you send. Our calculators run entirely in your browser; the numbers you type into them are not sent to or stored on our servers.'],
+          ['How We Use Your Information', 'We use this data to operate and improve the site, send newsletters you requested, respond to messages, measure audience and keep the site secure. We do not sell your personal information.'],
+          ['Cookies and Similar Technologies', 'We use essential cookies/local storage (for example to remember your cookie choice) and, with your consent, analytics and advertising cookies. A banner on your first visit lets you accept or reject non-essential cookies; you can change your decision at any time by clearing this site\u2019s data in your browser. We support Google Consent Mode, so Google tags adjust their behaviour to your choice.'],
+          ['Google Analytics', 'We use Google Analytics 4 to understand how readers use the site. It may set cookies and collect IP-derived and usage data subject to your consent. Learn more at policies.google.com/technologies/partner-sites.'],
+          ['Advertising and Google AdSense', 'We may show ads served by Google AdSense and other Google advertising products. Third-party vendors, including Google, use cookies to serve ads based on a user\u2019s prior visits to this and other websites. Google\u2019s use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the internet. You may opt out of personalised advertising by visiting Google Ads Settings (adssettings.google.com) or aboutads.info. In the EEA, UK and Switzerland, personalised ads are only shown with your consent.'],
+          ['Third-Party Links and Content', 'Our articles link to original sources and some pages include images from third parties such as Unsplash. Those sites have their own privacy practices that we do not control.'],
+          ['Data Retention and Security', 'Newsletter and contact details are kept only as long as needed to provide the service or answer your enquiry. We use industry-standard safeguards, but no internet transmission is completely secure.'],
+          ['Your Rights', 'Depending on where you live (for example the EEA, UK, or California) you may have the right to access, correct, delete or port your personal data, to object to or restrict processing, and to opt out of the sale or sharing of personal information. We do not sell personal information. To exercise a right, email privacy@policyrix.com. You can unsubscribe from the newsletter at any time.'],
+          ['Children', 'PolicyRix is not directed to children under 16 and we do not knowingly collect their personal data.'],
+          ['Changes to this Policy', 'We may update this policy from time to time. The date below shows the latest revision.'],
         ].map(([title, body]) => (
           <div key={title}>
             <h2 className="font-serif font-bold text-navy-900 text-xl mb-2" style={{ color: '#0A1628' }}>{title}</h2>
             <p>{body}</p>
           </div>
         ))}
-        <p className="text-sm text-slate-500">Last updated: June 10, 2026</p>
+        <p className="text-sm text-slate-500">Last updated: October 12, 2026</p>
       </div>
     </div>
   );

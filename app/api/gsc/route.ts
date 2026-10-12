@@ -1,12 +1,14 @@
 // app/api/gsc/route.ts
 import { google } from 'googleapis';
 import { NextRequest, NextResponse } from 'next/server';
+import { isAdmin } from '@/lib/adminAuth';
 
 // ✅ FIX: force-dynamic prevents this from running at BUILD TIME
 // Without this, Next.js tries to call the GSC API during `next build` → error
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
+  if (!isAdmin(req)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   try {
     // Validate environment variables
     const projectId   = process.env.GOOGLE_PROJECT_ID;
