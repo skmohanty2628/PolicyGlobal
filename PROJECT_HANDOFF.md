@@ -54,5 +54,8 @@ Claude then must:
 - 2026-10-12: 6 new articles (content/news/2026-10-12.json).
 - 2026-10-13: 6 new articles (content/news/2026-10-13.json: ACA 2027 premiums US, BoJ hike Japan, PRA thresholds UK, Ontario storm Canada, Munich Re nuclear verdicts Germany, LIC new plans India).
 - 2026-10-13 old-article upgrades (rewritten 850-970 words, re-verified, kept original ids/dates/slugs, saved into content/news/<original-date>.json; originals remain in content/archive/ and are ignored): 2026-08-04-012 (UK captive regime), 2026-08-05-005 (Prudential-HCL India), 2026-08-05-011 (UAE Central Bank Law), 2026-08-06-012 (Singapore MAS PCC), 2026-08-06-015 (AXA).
+- 2026-10-14: 6 new articles (content/news/2026-10-14.json: US CPI 3.7% Sept; Social Security 3.6% COLA 2027; Medicare 2027 premiums/OE; MAS holds S$NEER band; ICICI Life Q2 FY27; RBA FSR + APRA climate stress test).
+- 2026-10-14 old-article upgrades (800+ words, merged into existing/new content/news/<original-date>.json): 2026-08-05-010 (MAS/ABS ACT taskforce), 2026-08-05-013 (Canada mortgage renewals + BoC 2.25%), 2026-08-06-010 (APRA minor updates), 2026-08-04-015 (UAE CBUAE Sept QER; growth corrected from 5.6% to 1.6%), 2026-06-10-005 (India 100% FDI; IRDAI PEPF article skipped as unverifiable, still in archive).
+- Remember: when upgrading into a date file that already exists, MERGE by id, never overwrite.
 - Next upgrade candidates (not yet done): any other archived story with lasting value; skip price/market-move items. Never reuse an upgraded id.
 - Topics already covered recently (avoid duplicates): Fed hike/mortgage rates (Oct 12), Hurricane Isaias, IRDAI commissions, RBI 5.50%, VW car finance UK, ASIC insurers letter, plus the Oct 13 list above.
