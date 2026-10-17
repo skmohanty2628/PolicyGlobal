@@ -138,5 +138,40 @@
       "kidnap and ransom"
     ],
     "reading_time": "8 min read"
+  },
+  {
+    "id": "2026-06-17-011",
+    "date": "2026-06-17",
+    "title": "Michigan Supreme Court Backs Progressive's Rescission of an Auto Policy Over a Garaging Misstatement, Ruling Unanimously for the Insurer",
+    "slug": "michigan-supreme-court-progressive-policy-rescission-misstatement-2026",
+    "summary": "On April 20, 2026 the Michigan Supreme Court unanimously held that a trial court abused its discretion by reforming rather than rescinding a Progressive no-fault policy where the insured misstated where her cars were garaged.",
+    "description": "A mistake about where a car is kept can cost a driver their auto insurance, according to a unanimous decision of the Michigan Supreme Court. On April 20, 2026, the court ruled in a case brought by Janice Sherman against Progressive that a trial court had abused its discretion by reforming an auto policy instead of allowing the insurer to rescind it. The decision was reported on April 22 by Insurance Business, whose report this article summarises. An earlier version of this article described the case as one about driver misstatements in general. The court's decision is specifically about a misstatement of the garaging address, and the article now says so. This is a summary of a news report and not legal advice, and the formal opinion should be consulted for exact wording.\n\nWhat were the facts? In November 2020, Janice Sherman bought a Michigan no-fault auto policy from Progressive covering a Cadillac and a Chrysler. Her application listed Clinton Township as her home address and as the garaging location, and identified herself as the sole resident and driver. She did not update the information when she renewed six months later. In July 2021, she was injured as a passenger in an insured vehicle when a hit-and-run driver struck it, and she filed a claim for personal protection insurance (PIP) benefits, the no-fault coverage that pays medical and related costs. Progressive's investigation found that the cars were garaged in Detroit, not Clinton Township. She lived in Detroit with her adult son, and one vehicle was garaged at her brother's home. None of this had been disclosed. Sherman said that her Detroit home was flooded and uninhabitable when she applied, that an agent completed the application, and that she never meant to defraud anyone. Progressive's underwriting specialist calculated that accurate information would have raised her premium by 83.2%.\n\nWhat happened in the lower courts? Progressive denied the claim, rescinded the policy from the start, and refunded $1,491.54 in premiums. Sherman sued for benefits and breach of contract. The trial court denied Progressive's motion for summary disposition and ordered the policy reformed to a Detroit address, with Sherman required to repay the refund plus an additional premium, a total of $2,617.65. The Court of Appeals unanimously reversed. It held that the trial court erred in ordering reformation when the policyholder, not the insurer, engaged in misconduct. It vacated and reissued its opinion to clarify its reasoning, reaching the same result.\n\nWhat did the Supreme Court decide? There were three holdings. First, on the standard of review, appellate courts reviewing a trial court's decision about rescission apply an abuse-of-discretion standard, not de novo review. This resolved confusion in lower courts, which had earlier applied a clear-error standard in a similar context. Second, the trial court abused its discretion, because the equities favoured Progressive: Sherman made material misrepresentations, Progressive relied on them, Progressive did nothing wrong, and no third-party interests were involved. Third, the court rejected Sherman's request for a new equities review by the trial court, distinguishing earlier cases where a remand was proper because no rescission analysis had been done. Six justices participated, and Justice Zahra wrote the opinion. Justice Noah Hood did not take part because he had sat on the Court of Appeals panel.\n\nWhat does the ruling mean in practice? Under Michigan law, as described in the report, rescission is available when an applicant gives materially inaccurate information that the insurer relied on, regardless of intent. That means an honest mistake can still be material. The article stresses that rescission is not automatic: courts must weigh the equities, and the result could differ where the insurer's own conduct is at issue, for example where third parties such as an injured passenger's insurer or a medical provider have interests. The report does not identify a specific statute, and we do not name one.\n\nWhy does garaging matter? Insurers set rates partly by where a vehicle is kept, because theft, accident and claim costs differ by location. Michigan's auto market is known for high premiums in some areas. A difference of 83.2% in the premium, as Progressive calculated here, illustrates why insurers treat the address as material.\n\nWhat should drivers do? Give accurate information about where each car is kept and who lives in the household, and update the insurer when circumstances change, including at renewal. If an agent completes an application, check it before signing. If something was wrong, correct it promptly. Misstatements can lead to rescission, denial of claims and loss of cover, which may be costly if injuries occur. Drivers with questions can ask their insurer or consult a lawyer or the state's insurance regulator.\n\nThis article is general information based on a news report of a court decision. It is not legal advice, and outcomes depend on the facts of each case.",
+    "category": "Auto Insurance",
+    "country": "United States",
+    "source_name": "Michigan Supreme Court opinion (April 20, 2026) as reported by Insurance Business and Beinsure",
+    "source_url": "https://www.insurancebusinessmag.com/us/news/auto-motor/michigan-court-backs-progressives-insurance-rescission-over-garaging-misrepresentation-572716.aspx",
+    "image_url": "https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1200&q=80",
+    "image_alt": "Auto insurance policy and legal gavel representing court ruling on coverage (illustrative)",
+    "video_url": "",
+    "published_at": "2026-06-16T07:30:00Z",
+    "verified_at": "2026-10-17T16:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "The Michigan Supreme Court decided Janice Sherman's case against Progressive on April 20, 2026, unanimously, in an opinion by Justice Brian K. Zahra; Justice Noah P. Hood did not participate.",
+      "Janice Sherman listed Clinton Township as her address and garaging location, but her cars were garaged in Detroit; Progressive's underwriter calculated accurate information would have raised her premium by 83.2%.",
+      "After a 2021 hit-and-run injury and PIP claim, Progressive denied the claim, rescinded the policy and refunded $1,491.54; the trial court reformed the policy to a Detroit address, but the Court of Appeals reversed.",
+      "The Supreme Court held that appellate review of a trial court's rescission decision is for abuse of discretion, and that the trial court abused it because the equities favoured Progressive.",
+      "Under Michigan law, rescission is available for materially inaccurate information the insurer relied on, regardless of intent, but it is not automatic: courts must weigh the equities."
+    ],
+    "why_it_matters": "Where a car is garaged is a major rating factor in Michigan's expensive auto market. The ruling shows that a misstatement on an application can cost an injured insured their coverage, even if it was not intended to deceive.",
+    "tags": [
+      "michigan supreme court",
+      "progressive",
+      "rescission",
+      "garaging",
+      "no-fault",
+      "misrepresentation"
+    ],
+    "reading_time": "8 min read"
   }
 ]

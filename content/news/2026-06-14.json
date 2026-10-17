@@ -35,6 +35,41 @@
     "reading_time": "8 min read"
   },
   {
+    "id": "2026-06-14-011",
+    "date": "2026-06-14",
+    "title": "Canadian Insurers Turn to Satellite Imagery and Laser Scans to Judge Wildfire Risk Property by Property",
+    "slug": "canada-insurers-satellite-laser-scan-wildfire-risk-premiums-2026",
+    "summary": "A CBC report of June 8, 2026 says insurers increasingly assess wildfire risk property by property with satellite imagery and laser scanning, rewarding FireSmart measures; one Nova Scotia owner who rebuilt saw her premium fall about 12%.",
+    "description": "How much you pay for home insurance in Canada may increasingly depend on what a satellite and a laser scanner see around your house, not on what happened in your region in the past. That is the central point of a CBC News report published on June 8, 2026, and republished by Yahoo News Canada, which describes how insurers are changing the way they judge wildfire risk. This article summarises that report. An earlier version of this article quoted national home-insurance inflation of 4.01% and a rise of 9.29% in Alberta premiums, and said affordability may become Canada's defining insurance crisis. The CBC report we reviewed does not contain these figures or that conclusion, and we could not verify them elsewhere, so they have been removed.\n\nWhat is changing? According to the report, insurers are moving away from judging risk by a region's fire history and toward assessing individual properties. They use satellite imagery and laser scanning, known as LiDAR, to examine factors such as how close trees are to a building, the roofing and building materials used, and how well the property is maintained. In effect, two houses on the same street may be assessed differently if one has a cleared buffer zone and fire-resistant materials and the other does not.\n\nWhy not rely on past fires? The report quotes actuary Mohan Sivapatham, who explains that wildfires differ from floods in an important way. After a forest has burned, it loses the fuel for future fires, and it takes years to regrow. That means a region's past wildfire record can say little about its future risk, in either direction. A recently burned area may be less likely to burn again for a time, while an unburned area full of dry fuel may be at greater risk. He argues, in the report's words, that looking at models and model results is even more important than relying on past data. Models can combine information about vegetation, weather, terrain and buildings in ways that a historical claims record cannot.\n\nWhat does this look like for a homeowner? The report gives an example. After the 2023 wildfires in Nova Scotia, Tricia Murray rebuilt her home in Hammonds Plains. Her premium then fell by about 12%. Her insurance agent credited the home's fire-resistant materials and the cleared buffer zone around it. Her subdivision, Highland Park, became the first in the Halifax region to earn an official FireSmart designation. FireSmart Canada is a programme that gives homeowners and communities guidance on reducing wildfire risk. Sivapatham says insurers are starting to factor such community measures into premiums. This is one case, and the report does not say that all homeowners would see similar reductions, so readers should not treat it as typical.\n\nWhat does the Insurance Bureau of Canada say? Amanda Dean of the Insurance Bureau of Canada says these tools let homeowners lower their risk by following FireSmart Canada guidelines. That fits the logic of property-level assessment: if insurers can see what a homeowner has done, they can reward it. The report does not describe the specific discounts that any insurer offers, and they differ by company and province.\n\nWhat happened in Nova Scotia? The 2023 Upper Tantallon fire caused $165 million in insured damage, destroyed 151 homes and displaced 16,000 people, according to the report. It is one of the events that has led insurers and communities in Atlantic Canada to take wildfire more seriously, a risk that was long associated with western provinces.\n\nWhat are the limits of the approach? Property-level assessment relies on data and models, which can be wrong or hard for homeowners to challenge. A homeowner whose property is rated high-risk because of a satellite image may want to know what data was used and how to correct errors. The report does not discuss how insurers handle disputes, and we have not seen a published industry standard on it. Another limit is that individual action has limits: a homeowner can clear brush, but cannot control the risk of a neighbour's property or the surrounding forest. That is why community measures matter.\n\nWhat can homeowners do? Practical steps suggested by the logic of the report include asking an insurer or broker what risk factors it considers, following FireSmart guidance on clearing vegetation and using non-combustible materials, and asking whether discounts are available for completing assessments or upgrades. A separate Bloomberg report, covered on this site, says Canadian insurers are encouraging owners to fortify homes and are offering some discounts for risk assessments or fire-resistant roofing and siding.\n\nOverall, and in short, the report describes a gradual shift in how insurers price a risk that is becoming more frequent and more costly. It is based on interviews and examples, not on industry-wide data. This article is general information and is not insurance advice.",
+    "category": "Insurance",
+    "country": "Canada",
+    "source_name": "CBC News (republished by Yahoo News Canada, June 8, 2026)",
+    "source_url": "https://www.cbc.ca/news/canada/nova-scotia/wildfire-risk-new-techniques-insurance-uninsurable-9.7194081",
+    "image_url": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80",
+    "image_alt": "Canada wildfire risk satellite laser scanning home insurance premiums 2026 (illustrative)",
+    "video_url": "",
+    "published_at": "2026-06-08T05:00:00Z",
+    "verified_at": "2026-10-17T14:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "Insurers are moving away from judging wildfire risk by a region's fire history and toward assessing each property, using satellite imagery and laser scanning.",
+      "The tools examine tree proximity, roofing and building materials and maintenance; the Insurance Bureau of Canada's Amanda Dean says they let homeowners lower risk by following FireSmart Canada guidelines.",
+      "After rebuilding her Hammonds Plains, Nova Scotia, home following the 2023 wildfires, Tricia Murray's premium fell about 12%, which her agent attributed to fire-resistant materials and a cleared buffer zone.",
+      "Actuary Mohan Sivapatham says a burned forest loses fuel for years, so models matter more than past data: 'Looking at models and model results is even more important than relying on past data.'",
+      "The 2023 Upper Tantallon fire caused $165 million in insured damage, destroyed 151 homes and displaced 16,000 people."
+    ],
+    "why_it_matters": "As wildfire risk grows, insurers are shifting from broad area pricing to individual property assessment. That can reward homeowners who protect their houses, but it also means some owners may find that cover costs more or is harder to get.",
+    "tags": [
+      "wildfire",
+      "lidar",
+      "satellite imagery",
+      "firesmart",
+      "home insurance",
+      "canada"
+    ],
+    "reading_time": "7 min read"
+  },
+  {
     "id": "2026-06-14-012",
     "date": "2026-06-14",
     "title": "Ontario's Auto Insurance Overhaul Takes Effect July 1, 2026: Only Medical, Rehabilitation and Attendant Care Stay Mandatory",
