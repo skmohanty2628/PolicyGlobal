@@ -348,5 +348,40 @@
       "fhcf"
     ],
     "reading_time": "7 min read"
+  },
+  {
+    "id": "2026-06-12-015",
+    "date": "2026-06-12",
+    "title": "BIBA Launches an Accredited Cyber Insurance Broker Directory to Point UK Small Businesses to Specialists, Citing a Gap in Cover",
+    "slug": "biba-accredited-cyber-insurance-broker-directory-uk-smes-dsit-engagement",
+    "summary": "The British Insurance Brokers' Association says only 10% of UK businesses and 5% of charities hold a specific cyber policy, according to the government's latest survey; its directory lists brokers who meet cyber-security, insurance and training criteria developed with input from the Department for Science, Innovation and Technology.",
+    "description": "Most small British businesses do not have insurance against cyber attacks, and the trade body for insurance brokers has launched a directory aimed at changing that. The British Insurance Brokers' Association (BIBA) has set up the BIBA Accredited Cyber Insurance Broker Directory, which allows a business to search for a broker that has met a defined set of standards for cyber expertise. The facts below come from BIBA's own press release, whose page was updated on July 14, 2026, and from trade coverage including The Insurer, which reported the plan on January 19, 2026. BIBA's pages carry several dates, including announcements in January and May 2026, and the release says it was announced at the BIBA Conference without giving the date, so we cannot give a single launch date. The release does not say how many brokers are accredited.\n\nWhy was it created? The press release says the aim is to help protect UK businesses, to raise awareness of cyber insurance and to narrow the protection gap by connecting small and medium-sized enterprises (SMEs) with genuine expertise. BIBA's chief executive, Graeme Trudgill, described the aim as 'ensuring SMEs can be signposted to a genuine expert'. He also said 'Cyber threats are on the increase and this is a positive initiative'. The protection gap is the difference between the losses businesses face and the amount covered by insurance. The release uses government survey data to illustrate it: DSIT's latest survey found that 10% of businesses and 5% of charities hold a specific cyber insurance policy. The release does not give the date or sample of that survey, so readers should treat the percentages as the figures BIBA chose to quote.\n\nWhat do brokers have to do to be accredited? According to the release, accredited brokers must run their own cyber security framework that generally meets or exceeds Cyber Essentials, the UK government-backed baseline certification for basic security controls. They must hold standalone cyber insurance for their own business. Their relevant staff must complete continuous cyber training and have a good understanding of cyber risks. The process, BIBA says, was developed by the association and informed by industry views and government guidelines. The idea is that a broker who has secured and insured their own firm is better placed to advise a client on doing the same.\n\nWhat is the government's role? Some summaries describe the directory as a formal partnership with DSIT, the department responsible for UK cyber policy. The release is more limited: it says BIBA engaged with DSIT while developing the accreditation criteria, and it includes a quote from Baroness Lloyd of Effra, the Parliamentary Under-Secretary of State for the digital economy, who said, 'This work matters – and we need to keep pushing it further.' That is support for the initiative, but the release does not say that the department runs, funds or endorses the directory in a formal sense, so we describe the relationship as engagement.\n\nHow serious is the threat to small firms? BIBA quotes two sources. The Hiscox Cyber Readiness Report 2025 found that 59% of respondents had experienced a cyber-attack in the previous 12 months. A buyers' guide produced by BIBA with the insurer CFC shows that SMEs are targeted nearly four times as often as large organisations. Both are survey and industry findings, and the release does not say how they were measured. They are offered as context for why advice matters: small firms are attacked often but may lack both the specialist knowledge to buy suitable cover and the budget to cope with an attack on their own.\n\nHow does a business use it? A business can search the directory on the BIBA website for an accredited broker, and brokers can apply for accreditation through the same site. BIBA says the directory will be promoted in its 'Ben the Broker' advertising campaign, which suggests the association wants consumers and firms to find it. The directory does not sell insurance itself. It points to intermediaries who can assess a company's cyber risk, recommend a structure of cover and help with measures to reduce the risk. An accredited broker still has to be judged on its own merits, as accreditation is a baseline and not a guarantee of price, claims service or suitability.\n\nWhat should a small business do now? The practical steps are to check which controls it already has, such as multi-factor authentication, regular backups and staff training, because insurers usually ask about them. Then to ask a broker whether the policy covers ransomware, business interruption, data restoration and liability to customers, and what the exclusions and the limits are. Policy wording differs between insurers, so reading the wording carefully matters. The directory is a starting point, not a recommendation of any one broker. This article is a news summary and not insurance advice.",
+    "category": "Insurance",
+    "country": "United Kingdom",
+    "source_name": "BIBA press release and The Insurer",
+    "source_url": "https://www.biba.org.uk/press-releases/new-biba-accredited-cyber-insurance-broker-directory-launched",
+    "image_url": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1200&q=80",
+    "image_alt": "UK cyber insurance broker directory BIBA government DSIT partnership (illustrative)",
+    "video_url": "",
+    "published_at": "2026-06-10T09:00:00Z",
+    "verified_at": "2026-10-18T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "BIBA's Accredited Cyber Insurance Broker Directory lets UK businesses search for brokers who meet set criteria; BIBA announced it at its conference and the press release page was updated on July 14, 2026.",
+      "To be accredited, brokers must run a cyber security framework that generally meets or exceeds Cyber Essentials, hold standalone cyber insurance for their own business, and keep staff trained in cyber risk.",
+      "BIBA says it engaged with the Department for Science, Innovation and Technology (DSIT) while developing the criteria; DSIT's latest survey found 10% of businesses and 5% of charities hold a specific cyber insurance policy.",
+      "BIBA cites the Hiscox Cyber Readiness Report 2025 (59% of respondents had a cyber-attack in the previous 12 months) and a guide with CFC showing SMEs are targeted nearly four times more than large organisations.",
+      "The number of accredited brokers is not stated in the release; the directory is to be promoted through BIBA's 'Ben the Broker' campaign."
+    ],
+    "why_it_matters": "Many small firms have no cyber policy and do not know who to ask, so they carry the whole cost of a ransomware or fraud incident themselves. A directory built on stated standards is an attempt to close that gap by making it easier to find a broker who understands the risk.",
+    "tags": [
+      "BIBA",
+      "cyber insurance",
+      "brokers",
+      "UK SMEs",
+      "DSIT",
+      "cyber essentials"
+    ],
+    "reading_time": "7 min read"
   }
 ]
