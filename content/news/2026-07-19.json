@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2026-07-19-007",
+    "date": "2026-07-19",
+    "title": "Japan's Diet Passes Law Reclassifying Crypto as Financial Products: About 20% Separate Tax Planned, Insider-Trading Rules and Tougher Penalties",
+    "slug": "japan-diet-passes-fiea-amendment-crypto-financial-products-20-percent-tax-insider-trading-penalties",
+    "summary": "Japan's upper house passed on July 15, 2026 an amendment to the Financial Instruments and Exchange Act that treats crypto assets as financial products, adds insider-trading rules and disclosure duties, and raises penalties for unregistered operators, with a roughly 20% separate tax planned through later tax reform.",
+    "description": "Japan has moved crypto assets under the same legal framework as securities, after its parliament passed an amendment to the Financial Instruments and Exchange Act. The Block reported that the upper house approved the bill on July 15, 2026, following the lower house, which had passed it earlier, as reported by Defiant on June 12. The change is significant because it reclassifies crypto assets from payment-like instruments under the Payment Services Act to financial products under the securities-style law, which carries stricter conduct rules and enforcement.\n\nSeveral components of the reform are known. First, the law introduces insider-trading rules for crypto assets. Until now, insider trading in crypto has not been treated in the same way as in shares, and extending the rules means that people with non-public information about a token or an exchange listing could be penalised. Second, it requires issuers of certain crypto assets to make annual disclosures, giving investors a regular source of information about the projects behind tokens. Third, it raises penalties for operating without registration: the maximum prison term goes from three years to ten, and the maximum fine goes from 3 million yen to 10 million yen. These are the figures reported in the coverage.\n\nThe tax part of the story is more complicated, and it is often mixed up with the law itself. Under the current system, gains from crypto trading are taxed as miscellaneous income at rates that can reach up to 55 per cent including local taxes. The plan reported is a separate tax rate of about 20 per cent, similar to the treatment of gains on shares, together with the ability to carry losses forward for three years. However, the tax change requires separate tax reform legislation, which the coverage expects around January 2028. Investors should therefore not assume that the lower rate applies now, and the reports do not confirm the final rate.\n\nThe reclassification also opens the way to exchange-traded funds. The Japan Exchange Group has been reported as considering the first listings of spot crypto ETFs as early as 2027. Approval of a domestically listed bitcoin ETF has not been confirmed in the sources, so the timing depends on regulators and on the implementing rules. An ETF would let investors in Japan gain exposure through ordinary brokerage accounts, which is one of the reasons the market is watching the change.\n\nImplementation will take time. The law is set to take effect within one year of promulgation, and many details will be set by cabinet ordinance, meaning that the practical rules for exchanges, issuers and product providers are still to be finalised. Stablecoins are carved out of the new framework and continue to be handled under separate rules. That means the headline of crypto becoming a financial product applies to crypto assets such as bitcoin and similar tokens rather than to every digital token.\n\nFor exchanges, the changes mean new compliance obligations and more supervision by the Financial Services Agency. For issuers, the disclosure duty will require a more formal approach to reporting, and for individual investors the protections should be closer to those that apply to share trading. Critics caution that volatility and risk remain and that the reform does not remove them. The details of how products are approved and supervised will decide whether the reform expands access or only adds cost.\n\nThere is a wider context. Several large economies are bringing crypto into their financial regulation instead of leaving it to payment or consumer rules, and Japan's move adds one of the larger retail markets to that group. The practical effect for readers is to watch three things: the cabinet ordinances that define the details, the timing of the tax reform in 2028, and whether the exchange group follows through on ETF listings. Until those are set, the law is a framework, and its financial effect on investors will depend on the secondary rules and the tax decision.\n\nIt is worth separating three timelines that are easy to confuse. The law itself has been passed and is waiting for promulgation and ordinances. The effective date falls within one year of promulgation, so exchanges have a limited window to prepare their registration, systems and disclosure processes. The tax change belongs to a separate legislative track and is expected later, which means that for some period investors could be operating under the new conduct rules while still paying tax at the old rates. The ETF question depends on both, since product providers will want to know the regulatory and tax treatment before launching.\n\nFor overseas readers, the lesson is that Japan has chosen to regulate crypto through securities law with specific rules for insider trading and disclosure, not through a light-touch registration regime. Whether that approach attracts more institutional participation, as supporters expect, or raises costs for smaller platforms, as critics fear, will only be visible once the ordinances and the first products are published. Investors holding crypto in Japan should keep records of purchases and sales, since tax treatment will depend on the rules in force when gains are realised.",
+    "category": "FinTech",
+    "country": "Japan",
+    "source_name": "The Block (July 15, 2026) and Defiant (June 12, 2026)",
+    "source_url": "https://www.theblock.co/post/408361/japan-passes-key-bill",
+    "image_url": "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=1200&q=80",
+    "image_alt": "Digital currency symbols representing crypto regulation in Japan (illustrative)",
+    "video_url": "",
+    "published_at": "2026-07-19T07:30:00Z",
+    "verified_at": "2026-10-27T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "The upper house passed the Financial Instruments and Exchange Act amendment on July 15, 2026, after the lower house approved it in June.",
+      "The tax plan is about 20% separate taxation instead of up to 55% now, with a three-year loss carry-forward, but the tax reform is expected only in January 2028.",
+      "The law adds insider-trading rules and mandatory annual disclosures for issuers of certain crypto assets.",
+      "Penalties for unregistered operation rise from three to ten years in prison and from 3 million yen to 10 million yen in fines.",
+      "The Japan Exchange Group is eyeing the first spot crypto ETF listings as early as 2027, but domestic bitcoin ETF approval has not been confirmed; the law takes effect within a year of promulgation and stablecoins are carved out."
+    ],
+    "why_it_matters": "Japan is one of the world's largest retail crypto markets, and moving digital assets under securities-style law changes how exchanges, issuers and investors are regulated and taxed. The tax change is the part many investors care about most, but it is not in force yet and depends on future legislation.",
+    "tags": [
+      "japan",
+      "crypto regulation",
+      "fiea",
+      "crypto tax",
+      "insider trading",
+      "etfs",
+      "fintech",
+      "financial instruments"
+    ],
+    "reading_time": "6 min read"
+  }
+]
