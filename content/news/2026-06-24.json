@@ -71,6 +71,43 @@
     "reading_time": "8 min read"
   },
   {
+    "id": "2026-06-24-006",
+    "date": "2026-06-24",
+    "title": "Stanford Study: California Home Insurance Premiums Up 84% Since 2020, and the FAIR Plan Now Covers About 5% of Homes, With Reliance Twice as High in Lower-Risk ZIP Codes",
+    "slug": "stanford-study-california-home-insurance-premiums-up-84-percent-fair-plan-5-percent-homes-prescribed-burns",
+    "summary": "A Stanford Climate and Energy Policy Program white paper finds average California homeowners premiums rose 84% from the end of 2020 to March 2026 and that the FAIR Plan now covers about 5% of single-family homes, up from 1.5%, while a separate study says prescribed burns could cut extreme wildfire risk if the state reaches 500,000 acres a year.",
+    "description": "California's home insurance problem is not confined to the hills and canyons that burn. That is the central conclusion of a white paper from Stanford's Climate and Energy Policy Program, which used newly available loan-level data to measure how far the shortage of private coverage has spread. Stanford published a summary in June 2026, written up by Rob Jordan, and local media including ABC7 News reported the findings on July 6, 2026 alongside a separate Stanford study on controlled burns. Together they offer a more measured account than the usual headlines about insurers leaving the state.\n\nThe main numbers are as follows. Average California homeowners insurance premiums rose 84 per cent from the end of 2020 to March 2026, according to the paper. Average deductibles rose from $1,813 to $2,553 over the same period. The California FAIR Plan, the state's insurer of last resort, covered about 5 per cent of single-family homes in March 2026, up from 1.5 per cent in December 2020. It backed about 6 per cent of new single-family mortgage originations, and more than one in 17 new California home loans is written with FAIR Plan coverage as the only available option. ABC7, summarising comments from researchers, described the share of new mortgages backed by FAIR Plan coverage as having quadrupled to 5 per cent, so the reported figure differs slightly between the paper's summary and the television report. The paper also found that Californians' reliance on the FAIR Plan in moderate- and low-wildfire-risk ZIP codes is about twice the plan's overall market share, and nearly half of FAIR Plan customers buy supplemental policies to fill gaps in coverage.\n\nLead author Nam Nguyen, a research fellow at the program, said the problem is bigger than most people think and will get worse before it gets better. Michael Wara, the program's director and co-author, described what he called an 80-20 problem to ABC7: prices in low-risk areas remain under control and are doing fine, while high-risk areas face an availability problem that pushes homeowners into the FAIR Plan. He estimated that high-risk areas make up 10 to 20 per cent of the market. The two statements are not contradictory, since the paper shows that reliance on the FAIR Plan in lower-risk ZIP codes is twice its overall share, which is a sign of strain outside the highest-risk areas even if prices there are less affected.\n\nBackground helps with interpretation. The FAIR Plan was created in 1968 to address widespread insurance discrimination against communities of color, and it covers damage from fire, smoke, lightning and in-home explosions. The paper attributes the current crisis to three forces: rising wildfire risk, a COVID-era inflation spike, and Proposition 103, passed in 1988. That law was aimed at auto insurance premium surges but also limits home insurers from charging rates that reflect actual and projected risk. By 2022, seven of the 12 largest California home insurers had reduced or halted new underwriting in the state. The California Department of Insurance has introduced reforms that the researchers say take time to work, and they see evidence that the reforms have made insurance less affordable as a side effect. Wara told ABC7 that reforms backed by the Newsom administration, which let insurers use specific types of risk modeling, are slowly taking effect.\n\nThe paper makes two recommendations. The first is to update state regulations so that insurers can price the true cost of covering homes in fire-prone areas, including reinsurance costs and computer modeling of future wildfires. The second is to invest heavily in reducing wildfire risk, for example by thinning overgrown forests with prescribed burns and strengthening homes against fire. The authors summarise the only lasting solution as burning down fewer houses.\n\nA separate study led by Marshall Burke examined prescribed fire, or controlled burns. According to ABC7, Burke found that prescribed burns sharply reduce the likelihood of extreme wildfire in later years, with the benefit lasting about a decade or a little longer, and that they also reduce toxic smoke. California's target is to pre-burn about 500,000 acres a year. Burke said the target is realistic but potentially years away, estimated that the state is about one-fifth of the way there, and said that at 500,000 acres a year you can make a pretty substantial dent in risk. The studies recommend more funding for fire-hardening homes in high-risk areas and for identifying and reducing wildfire risk, measures the article calls costly but capable of offsetting billions of dollars in potential future wildfire losses.\n\nWhat the reports do not provide is also worth noting. The ABC7 account does not state the paper's journal, sample size or detailed methodology, and the Stanford summary describes the paper as the first in a planned series, so further findings may follow. For homeowners, the practical point is that availability, not just price, is now a concern in more of the state, and that the FAIR Plan, which covers fewer types of loss than a standard policy, is increasingly used as a primary source of cover. For policymakers, the findings frame the choice as one of pricing reform together with long-term risk reduction.",
+    "category": "Insurance",
+    "country": "United States",
+    "source_name": "Stanford Doerr School of Sustainability and Stanford Woods Institute (June-July 2026), with ABC7 News (July 6, 2026)",
+    "source_url": "https://news.stanford.edu/stories/2026/06/california-home-insurance-crisis-wildfire-country",
+    "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
+    "image_alt": "US residential homes and homeowners insurance market (illustrative)",
+    "video_url": "",
+    "published_at": "2026-06-24T08:00:00Z",
+    "verified_at": "2026-10-28T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "Average California homeowners premiums rose 84% from the end of 2020 to March 2026, and average deductibles rose from $1,813 to $2,553.",
+      "The California FAIR Plan covered about 5% of single-family homes in March 2026, up from 1.5% in December 2020, and about 6% of new single-family mortgage originations; ABC7 reported the share of new mortgages backed by FAIR Plan coverage had quadrupled to 5%.",
+      "More than 1 in 17 new California home loans are written with FAIR Plan coverage as the only available option, and reliance in moderate- and low-risk ZIP codes is about twice the plan's overall market share.",
+      "The paper links the crisis to rising wildfire risk, a COVID-era inflation spike and Proposition 103 of 1988, which limits rates that reflect actual and projected risk, and notes that by 2022 seven of the 12 largest home insurers had cut or halted new underwriting.",
+      "Researchers recommend letting insurers price true risk, including reinsurance costs and modeling, and investing in risk reduction such as prescribed burns and home hardening; Marshall Burke estimates California is about one-fifth of the way to 500,000 acres of prescribed burns a year."
+    ],
+    "why_it_matters": "California is the largest US homeowners market, and the Stanford findings suggest the problem has spread beyond wildfire country. If large numbers of buyers can only get coverage from the FAIR Plan, the state's last-resort insurer carries more of the risk, and the proposed fixes depend on both pricing reform and wildfire mitigation.",
+    "tags": [
+      "california",
+      "fair plan",
+      "homeowners insurance",
+      "wildfire",
+      "proposition 103",
+      "stanford",
+      "premiums",
+      "prescribed burns"
+    ],
+    "reading_time": "7 min read"
+  },
+  {
     "id": "2026-06-24-007",
     "date": "2026-06-24",
     "title": "UnitedHealthcare, Humana and Aetna Shrink Their Medicare Advantage Footprints for 2026 as Benefits Are Trimmed",
