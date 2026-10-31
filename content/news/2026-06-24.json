@@ -36,6 +36,41 @@
     "reading_time": "7 min read"
   },
   {
+    "id": "2026-06-24-003",
+    "date": "2026-06-24",
+    "title": "FCA Takes Euro Exchange Securities UK Into Special Administration in Its First Case of This Kind, Citing Weak Financial Crime Controls and Safeguarding",
+    "slug": "fca-euro-exchange-securities-uk-special-administration-first-case-financial-crime-safeguarding-teneo",
+    "summary": "The Financial Conduct Authority required Euro Exchange Securities UK Limited to stop regulated e-money and payment services on 2 June 2026 and obtained a court order appointing special administrators from Teneo, citing weaknesses in financial crime controls, safeguarding, ownership and governance, in the regulator's first case of its kind.",
+    "description": "The Financial Conduct Authority has taken a payments firm, Euro Exchange Securities UK Limited, into special administration, a step the regulator describes as the first of its kind. The facts in this article come from the FCA's press release, published on 11 June 2026 and updated on 14 August 2026. Other claims that circulated in the press about the firm's transaction volumes, its client base and the timing of earlier investigations are not part of the FCA's announcement, and they are not repeated here because they could not be checked against the regulator's own statement.\n\nWhat happened\n\nOn 2 June 2026 the FCA required Euro Exchange Securities UK Limited, referred to below as EES, to stop providing regulated e-money and payment services. Alongside that requirement, the court appointed interim managers to the firm. The FCA then obtained a court order appointing special administrators, Duncan Perring and James Bennett of the advisory firm Teneo. The administrators act under the Payment and Electronic Money Institution Insolvency Regulations 2021, a set of rules created for the failure of payment and e-money firms. EES did not challenge the application, so the court order proceeded without a contested hearing.\n\nWhy the FCA acted\n\nThe FCA said it had concerns about systemic weaknesses in the firm's financial crime framework and in how it safeguarded customer funds. It also cited concerns about the firm's ownership and governance. Financial crime frameworks are the systems and controls that a regulated firm must have to detect and prevent money laundering and other illicit use of its services. Safeguarding is the legal requirement that a payment or e-money firm keeps customer money separate from its own funds, so that customers can be repaid if the firm fails. The FCA said it worked with the Security Industry Authority in the course of the case, according to its announcement.\n\nMatthew Long of the FCA said the risk of payment firms being used by criminals to launder cash to fund other offences is significant. That statement explains why the regulator treats financial crime controls as a core condition of authorisation and not as a secondary matter.\n\nA first for the regulator\n\nThe FCA describes the case as the first of its kind. Special administration for payment and e-money institutions was created by regulations passed in 2021, and a regulator using the full process on a live firm marks a step beyond fines or restrictions. In a normal insolvency, administrators work for creditors in general. A special administration regime has a specific objective that puts the return of customer funds first, which is why the rules were designed for firms holding other people's money.\n\nWhat customers should know\n\nThe press release explains that e-money and payment services are not covered by the Financial Services Compensation Scheme, the UK's safety net for bank deposits. A customer of EES who held money with the firm therefore does not have scheme protection and depends on the safeguarded funds and the administration process. Customers are told to contact the administrators at EESUKCustomers@teneo.com. The FCA also warned about third-party claim helpers and scams. Insolvency often attracts opportunists who offer to recover money for a fee, and customers are generally advised to deal directly with the appointed administrators and not to pay intermediaries to submit claims. This is the FCA's warning in its own words, and readers should follow the FCA's page for current instructions.\n\nHow the process normally works\n\nIn a special administration of a payment firm, the administrators identify the funds that were safeguarded, work out who is owed what, and distribute the money to customers. The process can take time, because records must be reconciled and, if there is a shortfall, the administrators must decide how to treat different groups of claimants. The press release does not state how much money was held, how many customers are affected or whether safeguarded funds are sufficient. Those figures will come from the administrators' reports.\n\nWider lessons\n\nThe case illustrates three points about the payments sector. First, a firm can be authorised and still have weak controls, and the regulator can step in when it considers the weaknesses systemic. Second, safeguarding is central: when it works, customers recover their money; when it fails, they may lose out because no compensation scheme stands behind them. Third, ownership and governance matter, since the people who control a firm shape its culture and compliance. For businesses that use payment firms, the practical lesson is to check the status of a provider on the FCA register, to understand how their funds are held, and to avoid keeping large balances with a payments firm longer than necessary. This last point is general advice and not a finding from the case.\n\nLimits\n\nThis article is based on the FCA's press release and does not draw on court documents or the administrators' reports. Facts may change as the administration proceeds. It is general information, not legal advice, and affected customers should consult the administrators and the FCA directly.",
+    "category": "FinTech",
+    "country": "United Kingdom",
+    "source_name": "Financial Conduct Authority (press release, 11 June 2026, updated 14 August 2026)",
+    "source_url": "https://www.fca.org.uk/news/press-releases/court-orders-appointment-special-administrators-euro-exchange-securities-uk-limited",
+    "image_url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80",
+    "image_alt": "Financial crime investigation and payments regulation (illustrative)",
+    "video_url": "",
+    "published_at": "2026-06-22T12:27:00Z",
+    "verified_at": "2026-10-31T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "On 2 June 2026 the FCA required Euro Exchange Securities UK Limited to stop providing regulated e-money and payment services, and the court appointed interim managers.",
+      "The court later appointed Duncan Perring and James Bennett of Teneo as special administrators under the Payment and Electronic Money Institution Insolvency Regulations 2021; the firm did not challenge the application.",
+      "The FCA cited systemic weaknesses in the firm's financial crime framework and in its safeguarding of customer money, along with concerns about ownership and governance.",
+      "The FCA describes it as the first case of its kind, and enforcement official Matthew Long said the risk of payment firms being used by criminals to launder cash to fund other offences is significant.",
+      "The Financial Services Compensation Scheme does not cover e-money and payment services, and customers are directed to the administrators and warned about third-party claim helpers and scams."
+    ],
+    "why_it_matters": "Payment and e-money firms hold customers' money but are not covered by deposit protection. A regulator moving a firm into special administration shows how the safeguarding rules are meant to work in a failure, and it tells customers where to look for their money and what to avoid.",
+    "tags": [
+      "fca",
+      "payments",
+      "e-money",
+      "safeguarding",
+      "financial crime",
+      "special administration"
+    ],
+    "reading_time": "6 min read"
+  },
+  {
     "id": "2026-06-24-004",
     "date": "2026-06-24",
     "title": "ACA Marketplace Costs Jump in 2026 After Enhanced Subsidies Expire: Sign-Ups Fall Over 1 Million and Net Premiums Rise 58%, KFF Finds",
