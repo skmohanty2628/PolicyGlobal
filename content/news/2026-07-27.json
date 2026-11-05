@@ -35,5 +35,42 @@
       "ontario"
     ],
     "reading_time": "6 min read"
+  },
+  {
+    "id": "2026-07-27-013",
+    "date": "2026-07-27",
+    "title": "FCA's Streamlined Asset Management Rulebook Could Save Firms £128 Million a Year: Three Consultations on Fund Reporting, the UK AIFM Regime and Remuneration Close Between September and October",
+    "slug": "fca-streamlined-rulebook-asset-managers-128m-saving-frame-reporting-uk-aifm-remuneration-consultations-2026",
+    "summary": "On July 14, 2026 the FCA published proposals it says could save UK asset managers £128 million a year, through three consultations: fund reporting (FRAME, CP26/26, due September 22), the UK AIFM regime (CP26/28, due October 14) and solo remuneration rules (CP26/27, due September 16).",
+    "description": "On July 14, 2026, the UK Financial Conduct Authority published a press release titled Streamlined rulebook to save asset managers £128m a year. The release says the FCA's proposals could save asset managers £128 million annually. It describes the aims of the proposals as tailoring requirements proportionately, cutting firms' costs and providing better data for supervision. The proposals are contained in three consultation papers, and they remain proposals: the FCA is inviting feedback before making final decisions. This article summarises the press release. The release gives no date for the final rules and does not explain how the £128 million figure was calculated, so this article cannot reproduce that arithmetic.\n\nThe three consultations\n\nThe first is CP26/26, on a new framework called FRAME, short for Fund Reporting for Asset Management Entities. Feedback is due by September 22, 2026. The FCA says that a large share of the £128 million saving would come from simplifying these reporting requirements and tailoring them to the UK industry. The release does not say what share, and it does not give a separate saving for each paper.\n\nThe second is CP26/28, which proposes to modernise and simplify the rules that apply to alternative investment fund managers in the UK. The release describes them as AIFMD-related rules dating from 2013, that is, rules connected to the European Union's Alternative Investment Fund Managers Directive that the UK carried into its own regime. Feedback is due by October 14, 2026.\n\nThe third is CP26/27, on remuneration. It proposes to replace overlapping remuneration codes with a clearer and more proportionate framework for firms that are regulated solely by the FCA, which the release calls solo-regulated firms. The proposal would cover full-scope alternative investment fund managers, management companies of UCITS funds, and investment firms that are not small and non-interconnected under the MIFIDPRU prudential regime. Feedback is due by September 16, 2026. The remuneration proposals apply only to the listed types of firm and not to all asset managers.\n\nDates at a glance\n\nThe three feedback deadlines fall in the order September 16 for remuneration, September 22 for fund reporting and October 14 for the UK AIFM regime. The remuneration consultation therefore closes first, calculated here as six days before the FRAME deadline and 28 days before the AIFM deadline.\n\nWhat the FCA said\n\nSimon Walls, the FCA's executive director for markets, was quoted in the release. He said the changes would save industry tens of millions of pounds a year and would boost freedom for smaller firms to find new ways to achieve the same high standards. The release's wording of tens of millions is a less precise figure than the £128 million headline, and the release does not reconcile the two. Readers should therefore treat £128 million as the FCA's headline estimate for the full set of proposals and tens of millions as the executive's description, without assuming that one supersedes the other.\n\nWho is affected\n\nThe three papers reach different groups. FRAME, as the release describes it, concerns how asset management entities report on their funds, so it may matter to the largest number of firms. The AIFM papers concern managers of alternative funds such as hedge funds and private market vehicles, and the remuneration paper is limited to the three categories of firm named above. A firm that falls into more than one category, for instance a manager that runs both UCITS and alternative funds, could be affected by more than one consultation. That is a general observation about how the categories work and not a statement in the release.\n\nHow this fits the FCA's wider approach\n\nThe release presents these papers as part of the FCA's effort to reduce unnecessary cost and complexity. The sources used here do not describe the other parts of that effort in detail, so this article does not list them. The central claim is that requirements can be simplified without lowering standards, which is a claim the consultations will test. Firms and trade bodies will have the opportunity to say whether the proposed reporting regime really reduces work, or merely changes it.\n\nWhat firms should consider\n\nAsset managers in scope should check which of the three papers affect them, estimate the cost of their current reporting and remuneration arrangements against the proposals, and decide whether to respond before the deadlines. Smaller firms may be particularly interested in the remuneration changes and in the freedom to find new ways to meet standards that Walls described. Firms should not change processes yet, because the proposals could change.\n\nWhat is not known\n\nFinal rules are not scheduled in the release. The saving is an estimate for the proposals as drafted, and its method is not given. The release does not say how many firms would benefit or how the saving would be spread between large and small managers. Readers should consult the consultation papers themselves for the detail and for how to respond. This article is general information and not legal advice.",
+    "category": "Regulation",
+    "country": "United Kingdom",
+    "source_name": "Financial Conduct Authority (press release: Streamlined rulebook to save asset managers £128m a year, July 14, 2026)",
+    "source_url": "https://www.fca.org.uk/news/press-releases/streamlined-rulebook-save-asset-managers-128m-year",
+    "image_url": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1200&q=80",
+    "image_alt": "Financial documents representing asset management regulation (illustrative)",
+    "video_url": "",
+    "published_at": "2026-07-27T09:15:00Z",
+    "verified_at": "2026-11-05T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "The FCA's press release of July 14, 2026 says its proposals could save asset managers £128 million a year by tailoring requirements proportionately, cutting costs and providing better data for supervision; they are proposals, not final rules.",
+      "CP26/26 (FRAME, Fund Reporting for Asset Management Entities) is due for feedback by September 22, 2026, and the FCA says a large share of the £128 million would come from simplifying these requirements for the UK industry.",
+      "CP26/28 proposes modernising and simplifying the UK's AIFMD-related rules dating from 2013, with feedback due October 14, 2026.",
+      "CP26/27 proposes replacing overlapping remuneration codes with one clearer, more proportionate framework for solo-regulated firms (full-scope AIFMs, UCITS management companies and non-SNI MIFIDPRU investment firms), with feedback due September 16, 2026.",
+      "Simon Walls, the FCA's executive director for markets, said the changes could save industry tens of millions of pounds a year and boost freedom for smaller firms to find new ways to achieve the same high standards; the release does not explain how the £128 million was calculated."
+    ],
+    "why_it_matters": "UK asset managers have long argued that overlapping rules inherited from EU law add cost without adding protection. These proposals test whether the FCA can cut that burden while keeping standards, and the headline saving gives the industry a number to challenge or support in the consultations.",
+    "tags": [
+      "fca",
+      "asset management",
+      "rulebook",
+      "frame",
+      "aifm",
+      "remuneration",
+      "uk regulation",
+      "consultation"
+    ],
+    "reading_time": "7 min read"
   }
 ]
