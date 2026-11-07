@@ -1,5 +1,41 @@
 [
   {
+    "id": "2026-07-07-006",
+    "date": "2026-07-07",
+    "title": "UK Regulators Finalise Changes to the High Loan-to-Income Mortgage Limit: The Firm-Level 15% Cap Goes From October 28, 2026, While the 15% Aggregate Limit and the 4.5 Times Income Threshold Stay",
+    "slug": "pra-fca-final-policy-high-loan-to-income-flow-limit-firm-level-cap-removed-october-28-2026-ps19-26-ps26-20-fg26-11",
+    "summary": "On October 14, 2026 the PRA and FCA published final policy on the high loan-to-income mortgage flow limit, removing the firm-level 15% cap on lending at 4.5 times income or more from October 28 while keeping the 15% aggregate limit, measuring firms on a rolling four-quarter basis and the aggregate on a single quarter.",
+    "description": "The Bank of England's Prudential Regulation Authority (PRA) and the Financial Conduct Authority (FCA) have finalised changes to how the limit on high loan-to-income (LTI) mortgage lending is applied to individual lenders. The final policy was published on October 14, 2026, and the new PRA supervisory statement and FCA guidance take effect on October 28, 2026. This article draws on the FCA's page for its finalised guidance FG26/11 and on a summary of the joint policy statement by the law firm A&O Shearman. The policy statements and the PRA supervisory statement themselves were not reviewed in full, so the rule text should be consulted by any firm applying them.\n\nWhat the limit is\n\nThe Financial Policy Committee (FPC) of the Bank of England recommends a limit on the share of new mortgages that can be lent at high multiples of income. According to the A&O Shearman summary, the FPC defines high LTI as 4.5 times income, and the aggregate flow limit is 15%. In other words, no more than 15% of the total volume of new mortgages in a quarter should be at a multiple of 4.5 times income or more, as a system-wide test.\n\nWhat was proposed\n\nThe FPC made a recommendation in July 2025 that the regulators amend how the flow limit is implemented, giving lenders flexibility while keeping the aggregate flow consistent with the 15% limit. The FCA says the recommendation was that individual lenders should be allowed to increase their share of high LTI lending above 15%. The PRA and the FCA published a joint consultation on April 1, 2026. The FCA's page gives the end of the consultation as July 1, 2026, although its update log also lists a consultation period closing on September 18, a conflict the page does not explain.\n\nWhat was decided\n\nThe regulators are removing the firm-level 15% cap on high-LTI lending. This gives lenders more room to set their own strategies, but the aggregate flow is still tested for consistency with the FPC's 15% limit. The regulators changed the proposal in one respect. Individual firms' high-LTI flows, and any adjustments the regulators require, will be measured on a rolling four-quarter basis, which differs from the consultation proposal. The aggregate flow will be measured on a single calendar quarter, as consulted on.\n\nThe regulators received responses on the calibration of the policy, meaning the 4.5 times multiple and the 15% limit, and treated them as outside the consultation's scope. They passed the responses to the FPC for its next review of housing policies. The FPC is to consider them in that review, and nothing in the sources reviewed says it will change them.\n\nTransparency and monitoring\n\nThe PRA and FCA will calculate the aggregate high-LTI flow each quarter. The PRA will publish that figure, along with the total volume of in-scope completed mortgages and their share of all completed mortgages. The FCA will publish information when it expects adjustments, and the regulators will publish additional information on mortgage market trends. The FCA will monitor aggregate and individual firm flows as part of its supervisory work, and will monitor compliance with the guidance and any temporary supplemental LTI guidance.\n\nWho is covered\n\nThe FCA guidance applies to FCA-authorised mortgage lenders that are not also PRA-authorised or subsidiaries of PRA-authorised firms. The PRA's Rulebook amendments and supervisory statement apply to all firms in scope of the Housing Part of the PRA Rulebook, and the PRA says they also apply at UK subsidiary level for firms not already in scope.\n\nA note on dates\n\nThe sources give the key dates consistently: consultation opened April 1, 2026; final policy and guidance issued October 14, 2026; new documents effective October 28, 2026. The one inconsistency is the FCA page's two references to when the consultation closed, July 1 in the main text and September 18 in the update log. Because the consultation outcome was published on October 14, the exact closing date does not affect the current rules, but readers citing the consultation should check the original paper.\n\nDocuments and dates\n\nThe joint policy statement is published as PRA PS19/26 and FCA PS26/20. The PRA's new supervisory statement is SS2/26, which sets out governance and risk management expectations. The FCA's non-Handbook guidance FG26/11 replaces its earlier general guidance FG14/8 of October 2014, as revised by FG17/2 in February 2017 and FG25/4 in July 2025. Both new documents take effect on October 28, 2026.\n\nWhat it means for borrowers\n\nThe sources reviewed do not say that lenders will approve more high-LTI loans, and any such effect would depend on lenders' choices. Borrowers should expect that availability of mortgages at high multiples of income may vary by lender. What the sources do not say includes the expected effect on house prices, the number of additional loans, or whether lenders have already announced changes, and this article makes no claim about them.",
+    "category": "Loans & Mortgage",
+    "country": "United Kingdom",
+    "source_name": "Prudential Regulation Authority and Financial Conduct Authority (policy statements PS19/26 and PS26/20 and guidance FG26/11, October 14, 2026)",
+    "source_url": "https://www.fca.org.uk/publications/finalised-guidance/fg26-11-high-loan-income-lending",
+    "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
+    "image_alt": "House keys and paperwork representing mortgage lending rules (illustrative)",
+    "video_url": "",
+    "published_at": "2026-07-07T07:30:00Z",
+    "verified_at": "2026-11-07T15:00:00Z",
+    "verification_status": "Verified",
+    "key_points": [
+      "The PRA and FCA issued their final policy on October 14, 2026 as PRA PS19/26 and FCA PS26/20, following a consultation that opened on April 1, 2026 and, according to the FCA, closed on July 1.",
+      "The main change removes the firm-level 15% cap on high loan-to-income mortgage lending, giving lenders more room to set their own high-LTI strategies, while the aggregate flow is still expected to stay consistent with the Financial Policy Committee's 15% limit.",
+      "High loan-to-income is defined as 4.5 times income or more; the regulators treated responses on the 4.5 times and 15% calibrations as outside the consultation and passed them to the FPC for its next housing review.",
+      "Firms' high-LTI flows will be measured on a rolling four-quarter basis, which changed from the consultation proposal of fixed quarters, while the aggregate flow is measured on a single calendar quarter.",
+      "PRA supervisory statement SS2/26 and FCA guidance FG26/11 take effect on October 28, 2026, and the PRA will publish the aggregate high-LTI flow each quarter."
+    ],
+    "why_it_matters": "The limit affects how many mortgages lenders can offer at high multiples of income, which matters to first-time buyers and to anyone trying to borrow more relative to earnings. The change gives individual lenders flexibility while the regulators keep a system-wide cap, so access may vary more between lenders.",
+    "tags": [
+      "loan to income",
+      "pra",
+      "fca",
+      "mortgage lending",
+      "financial policy committee",
+      "mortgages",
+      "uk"
+    ],
+    "reading_time": "7 min read"
+  },
+  {
     "id": "2026-07-07-007",
     "date": "2026-07-07",
     "title": "APRA Finalises Reinsurance Rule Changes Letting Australian Insurers Use Catastrophe Bonds Without a Reinstatement, Cutting Approval Requirements From January 2027",
