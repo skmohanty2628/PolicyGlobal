@@ -83,12 +83,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            // Consent Mode v2: granted by default everywhere, denied by default only in the
+            // EEA, UK and Switzerland where opt-in is legally required. (Denied-for-everyone
+            // hid almost all real visits from GA4 after the Oct 12 consent change.)
+            gtag('consent', 'default', {
+              analytics_storage: 'granted', ad_storage: 'granted',
+              ad_user_data: 'granted', ad_personalization: 'granted'
+            });
             gtag('consent', 'default', {
               analytics_storage: 'denied', ad_storage: 'denied',
-              ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500
+              ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500,
+              region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
             });
             try {
-              if (localStorage.getItem('pr-consent') === 'granted') {
+              if (localStorage.getItem('pr-consent') === 'denied') {
+                gtag('consent', 'update', {
+                  analytics_storage: 'denied', ad_storage: 'denied',
+                  ad_user_data: 'denied', ad_personalization: 'denied'
+                });
+              } else if (localStorage.getItem('pr-consent') === 'granted') {
                 gtag('consent', 'update', {
                   analytics_storage: 'granted', ad_storage: 'granted',
                   ad_user_data: 'granted', ad_personalization: 'granted'
