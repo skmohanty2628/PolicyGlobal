@@ -13,6 +13,8 @@ import AdSlot from '@/components/AdSlot';
 import NewsletterBox from '@/components/NewsletterBox';
 import ShareButtons from '@/components/ShareButtons';
 import ReadingProgress from '@/components/ReadingProgress';
+import { seoTitle, seoDescription, isSubheading } from '@/lib/seo';
+import { getLatestNews } from '@/lib/news';
 
 interface Params { date: string; slug: string; }
 
@@ -30,12 +32,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const article = getNewsBySlug(params.date, params.slug);
   if (!article) return { title: 'Article Not Found' };
   return {
-    title: article.title,
-    description: article.summary,
+    title: seoTitle(article.title, 50),
+    description: seoDescription(article.summary),
+    keywords: article.tags,
     alternates: { canonical: `/news/${params.date}/${params.slug}` },
     openGraph: {
-      title: article.title,
-      description: article.summary,
+      title: seoTitle(article.title, 90),
+      description: seoDescription(article.summary, 200),
       images: [{ url: article.image_url, alt: article.image_alt }],
       type: 'article',
       publishedTime: article.published_at,
@@ -43,8 +46,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     },
     twitter: {
       card: 'summary_large_image',
-      title: article.title,
-      description: article.summary,
+      title: seoTitle(article.title, 90),
+      description: seoDescription(article.summary, 200),
       images: [article.image_url],
     },
   };
@@ -58,23 +61,42 @@ export default function ArticlePage({ params }: { params: Params }) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'NewsArticle',
-    headline: article.title,
+    headline: seoTitle(article.title, 110),
+    alternativeHeadline: article.title,
     description: article.summary,
-    image: article.image_url,
+    image: [article.image_url],
+    articleSection: article.category,
+    keywords: article.tags.join(', '),
+    wordCount: article.description.split(/\s+/).length,
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    citation: article.source_url,
     datePublished: article.published_at,
     dateModified: article.verified_at,
-    author: { '@type': 'Organization', name: 'PolicyRix Editorial', url: 'https://policyrix.com/masthead' },
+    author: { '@type': 'Organization', name: 'PolicyRix Editorial', url: 'https://www.policyrix.com/masthead' },
     publisher: {
       '@type': 'Organization',
       name: 'PolicyRix',
-      logo: { '@type': 'ImageObject', url: 'https://policyrix.com/og-default.png' },
+      logo: { '@type': 'ImageObject', url: 'https://www.policyrix.com/og-default.png' },
     },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://policyrix.com/news/${params.date}/${params.slug}` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.policyrix.com/news/${params.date}/${params.slug}` },
   };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.policyrix.com' },
+      { '@type': 'ListItem', position: 2, name: article.category, item: `https://www.policyrix.com/category/${article.category.toLowerCase().replace(/&/g, 'and').replace(/\s+/g, '-')}` },
+      { '@type': 'ListItem', position: 3, name: seoTitle(article.title, 90) },
+    ],
+  };
+  const latest = getLatestNews(8).filter((a) => a.slug !== article.slug).slice(0, 6);
 
   return (
     <>
       <ReadingProgress />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero Image */}
@@ -85,8 +107,7 @@ export default function ArticlePage({ params }: { params: Params }) {
           fill
           className="object-cover"
           priority
-          unoptimized
-          sizes="100vw"
+          sizes="(max-width: 1280px) 100vw, 1280px"
         />
         <div className="absolute inset-0"
           style={{ background: 'linear-gradient(to top, rgba(4,9,15,0.8) 0%, rgba(10,22,40,0.3) 100%)' }} />
@@ -120,7 +141,7 @@ export default function ArticlePage({ params }: { params: Params }) {
                 <span className="mx-2">·</span>
                 <span>{article.reading_time}</span>
               </div>
-              <ShareButtons url={`https://policyrix.com/news/${params.date}/${params.slug}`} title={article.title} />
+              <ShareButtons url={`https://www.policyrix.com/news/${params.date}/${params.slug}`} title={article.title} />
               {article.verification_status === 'Verified' && (
                 <span className="verified-badge">
                   <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
@@ -141,9 +162,9 @@ export default function ArticlePage({ params }: { params: Params }) {
             <AdSlot variant="inline" className="h-16 mb-6" />
 
             <div className="article-prose mb-8">
-              {article.description.split('\n\n').map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+              {article.description.split('\n\n').map((para, i) =>
+                isSubheading(para) ? <h2 key={i}>{para}</h2> : <p key={i}>{para}</p>
+              )}
             </div>
 
             {article.video_url && (
@@ -230,6 +251,21 @@ export default function ArticlePage({ params }: { params: Params }) {
                 className="text-sm font-semibold text-gold-600 hover:underline">
                 Browse all {article.country} stories →
               </Link>
+            </div>
+
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
+              <h3 className="font-serif font-bold text-base mb-4" style={{ color: '#0A1628' }}>
+                Latest on PolicyRix
+              </h3>
+              <ul className="space-y-3">
+                {latest.map((a) => (
+                  <li key={a.id}>
+                    <Link href={`/news/${a.date}/${a.slug}`} className="text-sm text-slate-700 hover:text-gold-600 leading-snug line-clamp-3">
+                      {a.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <AdSlot variant="sidebar" className="h-48" />

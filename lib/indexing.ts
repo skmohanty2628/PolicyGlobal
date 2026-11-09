@@ -2,7 +2,7 @@
 // IndexNow integration — instantly notify search engines about new content
 
 const INDEXNOW_KEY = process.env.INDEXNOW_KEY;
-const SITE_URL = 'https://policyrix.com';
+const SITE_URL = 'https://www.policyrix.com';
 
 if (!INDEXNOW_KEY) {
   console.warn('⚠️  INDEXNOW_KEY not set — search engine indexing disabled');
@@ -10,7 +10,7 @@ if (!INDEXNOW_KEY) {
 
 /**
  * Notify search engines (Google, Bing, Yandex, etc.) about a single URL
- * @param url The full URL to index (e.g., https://policyrix.com/news/2026-06-11/article-slug)
+ * @param url The full URL to index (e.g., https://www.policyrix.com/news/2026-06-11/article-slug)
  */
 export async function notifyGoogle(url: string): Promise<{ success: boolean; error?: string }> {
   if (!INDEXNOW_KEY) {
@@ -22,7 +22,7 @@ export async function notifyGoogle(url: string): Promise<{ success: boolean; err
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        host: 'policyrix.com',
+        host: 'www.policyrix.com',
         key: INDEXNOW_KEY,
         keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
         urlList: [url],
@@ -74,7 +74,7 @@ export async function notifyGoogleBatch(
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          host: 'policyrix.com',
+          host: 'www.policyrix.com',
           key: INDEXNOW_KEY,
           keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
           urlList: batch,

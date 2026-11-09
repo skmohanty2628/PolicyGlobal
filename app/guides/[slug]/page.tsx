@@ -29,7 +29,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
   if (!g) notFound();
   const tool = TOOLS.find((t) => t.slug === g.relatedTool);
   const others = GUIDES.filter((x) => x.slug !== g.slug).slice(0, 3);
-  const url = `https://policyrix.com/guides/${g.slug}`;
+  const url = `https://www.policyrix.com/guides/${g.slug}`;
 
   const jsonLd = [
     {
@@ -40,7 +40,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       datePublished: g.published,
       dateModified: g.updated,
       author: { '@type': 'Organization', name: 'PolicyRix Editorial' },
-      publisher: { '@type': 'Organization', name: 'PolicyRix', logo: { '@type': 'ImageObject', url: 'https://policyrix.com/og-default.png' } },
+      publisher: { '@type': 'Organization', name: 'PolicyRix', logo: { '@type': 'ImageObject', url: 'https://www.policyrix.com/og-default.png' } },
       mainEntityOfPage: url,
     },
     {

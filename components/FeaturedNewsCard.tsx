@@ -33,10 +33,10 @@ export default function FeaturedNewsCard({ article }: { article: NewsArticle }) 
         </div>
 
         <Link href={href}>
-          <h1 className="font-serif font-bold text-white text-2xl md:text-3xl leading-tight mb-3
+          <h2 className="font-serif font-bold text-white text-2xl md:text-3xl leading-tight mb-3 line-clamp-4
             group-hover:text-gold-300 transition-colors" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
             {article.title}
-          </h1>
+          </h2>
         </Link>
 
         <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-5 line-clamp-2 max-w-3xl">

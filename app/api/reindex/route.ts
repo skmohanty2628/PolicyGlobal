@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { notifyGoogleBatch } from '@/lib/indexing';
 import { getAllNews } from '@/lib/news';
 
-const BASE_URL = 'https://policyrix.com';
+const BASE_URL = 'https://www.policyrix.com';
 
 export async function POST(req: NextRequest) {
   // Protect this endpoint with a secret token

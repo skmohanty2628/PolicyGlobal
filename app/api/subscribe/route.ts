@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const FROM_EMAIL = 'PolicyRix <hello@policyrix.com>'; // ✅ Fixed
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://policyrix.com'; // ✅ Fixed
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.policyrix.com'; // ✅ Fixed
 
 export async function POST(req: NextRequest) {
   try {

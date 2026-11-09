@@ -1,6 +1,6 @@
 import { getLatestNews } from '@/lib/news';
 
-const SITE = 'https://policyrix.com';
+const SITE = 'https://www.policyrix.com';
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 

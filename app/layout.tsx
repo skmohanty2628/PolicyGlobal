@@ -12,7 +12,7 @@ import { countryFlag } from '@/lib/constants';
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || 'ca-pub-7617760862667547';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://policyrix.com'),
+  metadataBase: new URL('https://www.policyrix.com'),
   title: {
     default: 'PolicyRix — Global Insurance & Finance News',
     template: '%s | PolicyRix',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://policyrix.com',
+    url: 'https://www.policyrix.com',
     siteName: 'PolicyRix',
     title: 'PolicyRix — Global Insurance & Finance News',
     description:
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const latest = getLatestNews(10);
-  const tickerItems = latest.map((a) => `${countryFlag(a.country)} ${a.title} — ${a.source_name}`);
+  const tickerItems = latest.map((a) => `${countryFlag(a.country)} ${a.title.length > 95 ? a.title.slice(0, a.title.lastIndexOf(' ', 95)) + '…' : a.title}`);
   const latestDate = getAllDates()[0] ?? '';
   return (
     <html lang="en">
@@ -109,6 +109,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="flex flex-col min-h-screen bg-gray-100">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'PolicyRix',
+                url: 'https://www.policyrix.com',
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'NewsMediaOrganization',
+                name: 'PolicyRix',
+                url: 'https://www.policyrix.com',
+                logo: 'https://www.policyrix.com/og-default.png',
+                masthead: 'https://www.policyrix.com/masthead',
+                ethicsPolicy: 'https://www.policyrix.com/about',
+                email: 'editorial@policyrix.com',
+              },
+            ]),
+          }}
+        />
         <Header tickerItems={tickerItems} latestDate={latestDate} categories={getActiveCategories()} countries={getActiveCountries()} />
         <main className="flex-1 animate-fade-in">
           {children}

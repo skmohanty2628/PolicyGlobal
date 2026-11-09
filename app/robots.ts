@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin'],
     },
-    sitemap: 'https://policyrix.com/sitemap.xml',
-    host: 'https://policyrix.com',
+    sitemap: 'https://www.policyrix.com/sitemap.xml',
+    host: 'https://www.policyrix.com',
   };
 }

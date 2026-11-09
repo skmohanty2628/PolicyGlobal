@@ -4,7 +4,7 @@ import { GUIDES } from '@/lib/guides';
 import { TOOLS } from '@/lib/tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://policyrix.com';
+  const base = 'https://www.policyrix.com';
 
   const articles = getAllNews();
   const dates = getAllDates();

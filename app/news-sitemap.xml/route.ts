@@ -5,7 +5,7 @@
 
 import { getAllNews } from '@/lib/news';
 
-const SITE_URL = 'https://policyrix.com';
+const SITE_URL = 'https://www.policyrix.com';
 const PUBLICATION_NAME = 'PolicyRix'; // ⚠️ must exactly match the name entered in Publisher Center
 
 function escapeXml(unsafe: string): string {
