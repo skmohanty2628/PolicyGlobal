@@ -197,3 +197,9 @@ Claude then must:
 - Earlier "traffic" was mostly bot-like Direct (≈2s engagement); real Google clicks ≈0. Levers: indexing (www sitemap), evergreen guides, short headlines, internal links.
 - Added 3 evergreen guides (combined ratio, reinsurance, life insurer metrics) in lib/guides/ + index.ts.
 - Owner to-dos: www sitemap in GSC (remove apex), request indexing for homepage/top articles, Reindex Now in /admin, exclude /admin in GA4. Do NOT click AdSense "I confirm I have fixed the issues".
+
+### Nov 10 daily run (6 new + 5 upgrades)
+- New (content/news/2026-11-10.json, 6 articles, 800+ words each): 001 Safety Insurance Q3 2026 + Mapfre deal (US; SEC 8-K), 002 Trisura Q3 (Canada), 003 Niva Bupa Q2 FY27 (India), 004 ICICI Prudential Life H1 FY27 (India), 005 eHealth Q3 (US; 8-K), 006 EverQuote Q3 (US; 8-K). 3 US, 1 Canada, 2 India.
+- Upgrades (07-18, 07-05, 07-08, 07-09, 07-12 date files modified in content/news): Bank of Canada Jul 15 hold at 2.25% (BoC/Desjardins), Eurostat June flash HICP 2.8%, India April 2026 monthly current account surplus $4.7bn (archive wrongly called it latest period; RBI/PTI), MAS Protected Cell Company consultation (MAS/Rajah & Tann), FCA basic bank accounts mystery shopping (FCA press release).
+- LinkedIn: 6 posts + images saved to linkedin post/2026-11-10/. Connection requests held: 93 pending invites already exist; wait until pending count drops.
+- Build OK, validate_json OK. Owner items still open: retry Request indexing (homepage + 3 guides), check Search Console ~Nov 20-23, REINDEX_SECRET rotation, exclude /admin in GA4. Do NOT click AdSense "I confirm I have fixed the issues".
