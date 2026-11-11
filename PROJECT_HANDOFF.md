@@ -203,3 +203,11 @@ Claude then must:
 - Upgrades (07-18, 07-05, 07-08, 07-09, 07-12 date files modified in content/news): Bank of Canada Jul 15 hold at 2.25% (BoC/Desjardins), Eurostat June flash HICP 2.8%, India April 2026 monthly current account surplus $4.7bn (archive wrongly called it latest period; RBI/PTI), MAS Protected Cell Company consultation (MAS/Rajah & Tann), FCA basic bank accounts mystery shopping (FCA press release).
 - LinkedIn: 6 posts + images saved to linkedin post/2026-11-10/. Connection requests held: 93 pending invites already exist; wait until pending count drops.
 - Build OK, validate_json OK. Owner items still open: retry Request indexing (homepage + 3 guides), check Search Console ~Nov 20-23, REINDEX_SECRET rotation, exclude /admin in GA4. Do NOT click AdSense "I confirm I have fixed the issues".
+
+### Nov 11 daily run (6 new + 5 upgrades)
+- New (content/news/2026-11-11.json, 6 articles, 800+ words each): 001 Root Q3 2026 (US; SEC shareholder letter), 002 Oscar Health Q3 2026 (US; SEC 8-K; $250m risk adjustment benefit noted), 003 Mercury General Q3 2026 (US; net loss on investment losses, operating income $193.3m), 004 Palomar Q3 2026 (US; press release), 005 Definity Q3 2026 (Canada; Nov 5 release via Insurance Business), 006 Axis Max Life H1 FY27 (India; company press release, flagged as advertorial). 4 US, 1 Canada, 1 India.
+- Dropped: Go Digit Q2 (already live Nov 9), Hiscox/Allianz/Zurich (not out or unusable).
+- Upgrades (06-21, 06-21, 06-18, 07-09, 07-04 date files modified in content/news): Fed June 17 hold (2026-06-21-001), BoE June 18 hold 7-2 (2026-06-21-003), APRA CPS 230 amendments (2026-06-18-010), RBI UDGAM unclaimed deposits (2026-07-09-005), APRA longevity capital/AILP (2026-07-04-013). Note: gov sites (federalreserve.gov, rbi.org.in, bafin.de) are not fetchable from sandbox; used APRA/BoE pages plus press coverage.
+- Yesterday's push got a 403 (git credential was for account smohanty2628, repo owner is skmohanty2628); owner must clear cached GitHub credential.
+- LinkedIn: 6 posts + images in linkedin post/2026-11-11/; posting via Chrome done by Claude on user's instruction (see chat for outcome).
+- Build OK, validate_json OK. Do NOT click AdSense "I confirm I have fixed the issues".
