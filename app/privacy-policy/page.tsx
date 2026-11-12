@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy-policy' },
   title: 'Privacy Policy',
   description: 'PolicyRix Privacy Policy — how we collect, use, and protect your information.',
 };

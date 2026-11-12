@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/masthead' },
   title: 'Masthead & Editorial Team',
   description: 'Meet the editorial team behind PolicyRix, and read our corrections and sourcing policy.',
 };

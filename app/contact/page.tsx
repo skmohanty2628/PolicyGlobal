@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact PolicyRix',
   description: 'Contact the PolicyRix editorial team for news tips, corrections, or advertising inquiries.',
 };

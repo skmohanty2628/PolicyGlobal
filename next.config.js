@@ -1,3 +1,5 @@
+const legacy = require('./lib/legacy-redirects.json');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -12,6 +14,10 @@ const nextConfig = {
       config.resolve.fallback = { fs: false, path: false };
     }
     return config;
+  },
+  async redirects() {
+    // Old article URLs whose slug changed when an archive article was upgraded: 308 to the new URL.
+    return Object.entries(legacy).map(([source, destination]) => ({ source, destination, permanent: true }));
   },
   async headers() {
     return [

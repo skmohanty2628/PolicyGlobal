@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/disclaimer' },
   title: 'Disclaimer',
   description: 'PolicyRix legal disclaimer — informational content only, not financial advice.',
 };

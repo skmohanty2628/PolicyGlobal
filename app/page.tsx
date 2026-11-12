@@ -10,6 +10,9 @@ import NewsletterBox from '@/components/NewsletterBox';
 import DailyArchive from '@/components/DailyArchive';
 import SearchBar from '@/components/SearchBar';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = { alternates: { canonical: '/' } };
 
 export const revalidate = 3600; // ISR: revalidate every hour
 

@@ -14,6 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { categorySlug: string } }): Promise<Metadata> {
   const label = slugToLabel(params.categorySlug);
   return {
+    alternates: { canonical: `/category/${params.categorySlug}` },
     title: `${label} News`,
     description: `Latest verified ${label} news from PolicyRix — global coverage across insurance, finance, and regulation.`,
   };

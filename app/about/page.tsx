@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About PolicyRix',
   description: 'Learn about PolicyRix — our mission, editorial standards, and approach to verified global insurance and finance news.',
 };

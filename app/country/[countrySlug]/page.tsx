@@ -14,6 +14,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { countrySlug: string } }): Promise<Metadata> {
   const label = COUNTRIES.find((c) => c.slug === params.countrySlug)?.label ?? slugToLabel(params.countrySlug);
   return {
+    alternates: { canonical: `/country/${params.countrySlug}` },
     title: `${label} Insurance & Finance News`,
     description: `Latest verified insurance and finance news from ${label} — PolicyRix global coverage.`,
   };
