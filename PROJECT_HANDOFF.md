@@ -227,3 +227,10 @@ Claude then must:
 - Done: legacy redirects (lib/legacy-redirects.json, 126 old slugs), canonical tags on all pages, /daily/* noindex and out of sitemap, new /editorial-policy page, byline now PolicyRix Team, first analysis article (2026-11-12-007 Q3 insurer scorecard), lib/indexable.ts noindex rule for old non-upgraded news.
 - Plan: daily run now needs 2+ analysis pieces per day; keep archive upgrade slugs; add original tools/guides weekly; request AdSense review no earlier than about Nov 19 after a week of analysis-led publishing.
 - Open: confirm the AI-tools disclosure wording on /editorial-policy; Validate Fix for the 4xx item in Search Console after deploy.
+
+## Nov 12 addendum 2: full audit and strategy change
+- Search Console (3 months): 0 clicks, 65 impressions, 1 query. The site has no search traffic; AdSense "user interest" cannot pass until that changes.
+- Strategy: lead with evergreen guides and calculators (what finance sites earn search traffic from), keep news as analysis-led support.
+- Added 3 calculators (health plan cost comparison, compound interest, mortgage affordability) with WebApplication schema, and 5 guides (compare health plans, compound interest, house affordability/DTI, fixed vs adjustable mortgage, home insurance replacement cost). All worked examples were recomputed in code.
+- UX: homepage leads with Guides & Calculators and new H1; category/country pages show 24 stories with "Show more" (was 600+ cards); every article links to related guides/tools (lib/related.ts); bylines are PolicyRix Team.
+- Daily run from Nov 13: 2 analysis + up to 3 news per day, 1 new guide twice a week, 1 new calculator weekly; keep archive slugs; no AdSense review until GSC shows steady impressions and clicks.

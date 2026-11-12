@@ -47,10 +47,10 @@ export default function HomePage() {
               Global Insurance &amp; Finance Intelligence
             </p>
             <h1 className="font-serif font-bold text-white text-3xl md:text-5xl leading-tight mb-3">
-              The PolicyRix Daily Brief
+              Insurance &amp; Finance, Explained
             </h1>
             <p className="text-slate-400 text-sm max-w-xl mx-auto">
-              Verified news on insurance, banking, finance, and markets — from trusted global sources.
+              Insurance and finance explained: original analysis, plain-English guides, free calculators and verified daily news.
             </p>
             <div className="flex justify-center mt-5">
               <SearchBar />
@@ -71,6 +71,35 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* ── Left: Main Feed ── */}
           <div className="lg:col-span-2 space-y-8">
+
+            {/* Guides & tools */}
+            <section>
+              <h2 className="font-serif font-bold text-navy-900 text-xl gold-underline mb-5" style={{ color: '#0A1628' }}>
+                Guides &amp; Calculators
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {GUIDES.slice(0, 4).map((g) => (
+                  <Link key={g.slug} href={`/guides/${g.slug}`} className="news-card bg-white rounded-xl border border-gray-100 shadow-sm p-5 block">
+                    <p className="text-[10px] font-mono uppercase tracking-widest text-gold-600 mb-1">Guide · {g.readingMinutes} min</p>
+                    <p className="font-serif font-bold leading-snug" style={{ color: '#0A1628' }}>{g.title}</p>
+                  </Link>
+                ))}
+                {[...TOOLS].reverse().slice(0, 4).map((t) => (
+                  <Link key={t.slug} href={`/tools/${t.slug}`} className="news-card rounded-xl p-5 block" style={{ background: '#0A1628', border: '1px solid rgba(201,168,76,0.25)' }}>
+                    <p className="text-[10px] font-mono uppercase tracking-widest text-gold-400 mb-1">{t.icon} Free tool</p>
+                    <p className="font-serif font-bold text-white leading-snug">{t.title}</p>
+                    <p className="text-xs text-slate-400 mt-1">{t.short}</p>
+                  </Link>
+                ))}
+              </div>
+              <div className="flex gap-4 mt-3 text-xs font-semibold text-gold-600">
+                <Link href="/guides" className="hover:underline">All guides →</Link>
+                <Link href="/tools" className="hover:underline">All tools →</Link>
+              </div>
+            </section>
+
+
+            <hr className="section-divider" />
 
             {/* Featured Row */}
             <section>
@@ -98,32 +127,6 @@ export default function HomePage() {
                 Latest News
               </h2>
               <HomeFeed items={feed} />
-            </section>
-
-            {/* Guides & tools */}
-            <section>
-              <h2 className="font-serif font-bold text-navy-900 text-xl gold-underline mb-5" style={{ color: '#0A1628' }}>
-                Learn &amp; Calculate
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {GUIDES.slice(0, 2).map((g) => (
-                  <Link key={g.slug} href={`/guides/${g.slug}`} className="news-card bg-white rounded-xl border border-gray-100 shadow-sm p-5 block">
-                    <p className="text-[10px] font-mono uppercase tracking-widest text-gold-600 mb-1">Guide · {g.readingMinutes} min</p>
-                    <p className="font-serif font-bold leading-snug" style={{ color: '#0A1628' }}>{g.title}</p>
-                  </Link>
-                ))}
-                {TOOLS.slice(0, 2).map((t) => (
-                  <Link key={t.slug} href={`/tools/${t.slug}`} className="news-card rounded-xl p-5 block" style={{ background: '#0A1628', border: '1px solid rgba(201,168,76,0.25)' }}>
-                    <p className="text-[10px] font-mono uppercase tracking-widest text-gold-400 mb-1">{t.icon} Free tool</p>
-                    <p className="font-serif font-bold text-white leading-snug">{t.title}</p>
-                    <p className="text-xs text-slate-400 mt-1">{t.short}</p>
-                  </Link>
-                ))}
-              </div>
-              <div className="flex gap-4 mt-3 text-xs font-semibold text-gold-600">
-                <Link href="/guides" className="hover:underline">All guides →</Link>
-                <Link href="/tools" className="hover:underline">All tools →</Link>
-              </div>
             </section>
 
             {/* Newsletter */}

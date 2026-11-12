@@ -39,7 +39,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       description: g.description,
       datePublished: g.published,
       dateModified: g.updated,
-      author: { '@type': 'Organization', name: 'PolicyRix Editorial' },
+      author: { '@type': 'Organization', name: 'PolicyRix Team' },
       publisher: { '@type': 'Organization', name: 'PolicyRix', logo: { '@type': 'ImageObject', url: 'https://www.policyrix.com/og-default.png' } },
       mainEntityOfPage: url,
     },
@@ -60,7 +60,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         <h1 className="font-serif font-bold text-3xl md:text-4xl leading-tight" style={{ color: '#0A1628' }}>{g.title}</h1>
         <div className="flex flex-wrap items-center justify-between gap-3 mt-4 pb-5 border-b border-gray-200">
           <p className="text-xs text-slate-500 font-mono">
-            <Link href="/masthead" className="font-semibold text-slate-700 hover:underline">PolicyRix Editorial</Link>
+            <Link href="/masthead" className="font-semibold text-slate-700 hover:underline">PolicyRix Team</Link>
             <span className="mx-2">·</span>Updated {formatDate(g.updated)}
           </p>
           <ShareButtons url={url} title={g.title} />

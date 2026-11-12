@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     'economic policy',
     'insurance regulation',
   ],
-  authors: [{ name: 'PolicyRix Editorial Desk' }],
+  authors: [{ name: 'PolicyRix Team' }],
   creator: 'PolicyRix',
   publisher: 'PolicyRix',
   openGraph: {

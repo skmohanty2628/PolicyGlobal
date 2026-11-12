@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { relatedLearning } from '@/lib/related';
 import { isIndexable } from '@/lib/indexable';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -93,6 +94,7 @@ export default function ArticlePage({ params }: { params: Params }) {
       { '@type': 'ListItem', position: 3, name: seoTitle(article.title, 90) },
     ],
   };
+  const learn = relatedLearning(article.category);
   const latest = getLatestNews(8).filter((a) => a.slug !== article.slug).slice(0, 6);
 
   return (
@@ -201,6 +203,30 @@ export default function ArticlePage({ params }: { params: Params }) {
               </h2>
               <p className="text-slate-300 text-sm leading-relaxed">{article.why_it_matters}</p>
             </div>
+
+            {(learn.guides.length > 0 || learn.tools.length > 0) && (
+              <div className="rounded-xl p-6 mb-6 border bg-white" style={{ borderColor: '#E2E8F0' }}>
+                <h2 className="font-serif font-bold text-lg mb-4 flex items-center gap-2" style={{ color: '#0A1628' }}>
+                  <span className="w-1 h-5 rounded-full" style={{ background: '#C9A84C' }} />
+                  Understand the numbers
+                </h2>
+                <ul className="space-y-3 text-sm">
+                  {learn.guides.map((g) => (
+                    <li key={g.slug}>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-gold-600 mr-2">Guide</span>
+                      <Link href={`/guides/${g.slug}`} className="font-semibold text-slate-800 hover:underline">{g.title}</Link>
+                    </li>
+                  ))}
+                  {learn.tools.map((t) => (
+                    <li key={t.slug}>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-gold-600 mr-2">Calculator</span>
+                      <Link href={`/tools/${t.slug}`} className="font-semibold text-slate-800 hover:underline">{t.title}</Link>
+                      <span className="text-slate-500"> · {t.short}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="flex flex-wrap gap-2 mb-8">
               {article.tags.map((tag) => (

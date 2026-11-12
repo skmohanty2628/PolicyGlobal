@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import ShowMore from '@/components/ShowMore';
 import { Metadata } from 'next';
 import { getNewsByCategory, getActiveCategories } from '@/lib/news';
 import { CATEGORIES, slugToLabel } from '@/lib/constants';
@@ -44,9 +45,9 @@ export default function CategoryPage({ params }: { params: { categorySlug: strin
           <Link href="/" className="text-gold-600 font-semibold hover:underline">← Back to Latest News</Link>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ShowMore className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" initial={24} step={24}>
           {articles.map((a) => <NewsCard key={a.id} article={a} />)}
-        </div>
+        </ShowMore>
       )}
 
       {/* Category Quick Nav */}
