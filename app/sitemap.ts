@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { isIndexable } from '@/lib/indexable';
 import { getAllNews, getAllDates, getActiveCategories, getActiveCountries } from '@/lib/news';
 import { GUIDES } from '@/lib/guides';
 import { TOOLS } from '@/lib/tools';
@@ -18,10 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/disclaimer`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/privacy-policy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
+    { url: `${base}/editorial-policy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.4 },
     { url: `${base}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
   ];
 
-  const articlePages: MetadataRoute.Sitemap = articles.map((a) => ({
+  const articlePages: MetadataRoute.Sitemap = articles.filter((a) => isIndexable(a)).map((a) => ({
     url: `${base}/news/${a.date}/${a.slug.replace(/&/g, 'and')}`,
     lastModified: new Date(a.verified_at),
     changeFrequency: 'weekly' as const,
@@ -63,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...guidePages, ...toolPages, ...articlePages, ...dailyPages, ...categoryPages, ...countryPages];
+  return [...staticPages, ...guidePages, ...toolPages, ...articlePages, ...categoryPages, ...countryPages];
 }

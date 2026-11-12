@@ -88,6 +88,7 @@ export default function Footer() {
                 { label: 'Free Tools', href: '/tools' },
                 { label: 'RSS Feed', href: '/feed.xml' },
                 { label: 'Masthead', href: '/masthead' },
+                { label: 'Editorial Policy', href: '/editorial-policy' },
                 { label: 'Contact', href: '/contact' },
                 { label: 'Disclaimer', href: '/disclaimer' },
                 { label: 'Privacy Policy', href: '/privacy-policy' },

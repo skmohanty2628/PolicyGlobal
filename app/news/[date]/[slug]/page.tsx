@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { isIndexable } from '@/lib/indexable';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -36,13 +37,14 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     description: seoDescription(article.summary),
     keywords: article.tags,
     alternates: { canonical: `/news/${params.date}/${params.slug}` },
+    robots: isIndexable(article) ? undefined : { index: false, follow: true },
     openGraph: {
       title: seoTitle(article.title, 90),
       description: seoDescription(article.summary, 200),
       images: [{ url: article.image_url, alt: article.image_alt }],
       type: 'article',
       publishedTime: article.published_at,
-      authors: ['PolicyRix Editorial Desk'],
+      authors: ['PolicyRix Team'],
     },
     twitter: {
       card: 'summary_large_image',
@@ -73,7 +75,7 @@ export default function ArticlePage({ params }: { params: Params }) {
     citation: article.source_url,
     datePublished: article.published_at,
     dateModified: article.verified_at,
-    author: { '@type': 'Organization', name: 'PolicyRix Editorial', url: 'https://www.policyrix.com/masthead' },
+    author: { '@type': 'Organization', name: 'PolicyRix Team', url: 'https://www.policyrix.com/masthead' },
     publisher: {
       '@type': 'Organization',
       name: 'PolicyRix',
@@ -135,7 +137,7 @@ export default function ArticlePage({ params }: { params: Params }) {
 
             <div className="flex flex-wrap items-center gap-4 mt-4 mb-6 pb-6 border-b border-gray-200">
               <div className="text-xs text-slate-500 font-mono">
-                <Link href="/masthead" className="font-semibold text-slate-700 hover:underline">PolicyRix Editorial</Link>
+                <Link href="/masthead" className="font-semibold text-slate-700 hover:underline">PolicyRix Team</Link>
                 <span className="mx-2">·</span>
                 <time dateTime={article.published_at}>{formatDate(article.published_at)}</time>
                 <span className="mx-2">·</span>

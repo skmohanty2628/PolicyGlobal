@@ -221,3 +221,9 @@ Claude then must:
 - Nov 11 push 403 was fixed by the owner; Nov 10 and Nov 11 pages and the 5 Nov 11 upgrades were verified live on Nov 11.
 - Search Console check Nov 11: sitemap last read Nov 9 (492 discovered pages); a Nov 11 article was "URL is unknown to Google". Request indexing was not clicked by Claude.
 - Do NOT click AdSense "I confirm I have fixed the issues".
+
+## Nov 12 addendum: AdSense "Low value content" response
+- Diagnosis: all articles were rewrites of single outlet reports (no original analysis, byline "PolicyRix Editorial", very low indexing: 8 of 56 checked pages). Length was not the issue (median 889 words).
+- Done: legacy redirects (lib/legacy-redirects.json, 126 old slugs), canonical tags on all pages, /daily/* noindex and out of sitemap, new /editorial-policy page, byline now PolicyRix Team, first analysis article (2026-11-12-007 Q3 insurer scorecard), lib/indexable.ts noindex rule for old non-upgraded news.
+- Plan: daily run now needs 2+ analysis pieces per day; keep archive upgrade slugs; add original tools/guides weekly; request AdSense review no earlier than about Nov 19 after a week of analysis-led publishing.
+- Open: confirm the AI-tools disclosure wording on /editorial-policy; Validate Fix for the 4xx item in Search Console after deploy.

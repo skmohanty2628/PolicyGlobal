@@ -139,7 +139,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 url: 'https://www.policyrix.com',
                 logo: 'https://www.policyrix.com/og-default.png',
                 masthead: 'https://www.policyrix.com/masthead',
-                ethicsPolicy: 'https://www.policyrix.com/about',
+                ethicsPolicy: 'https://www.policyrix.com/editorial-policy',
                 email: 'editorial@policyrix.com',
               },
             ]),

@@ -16,6 +16,7 @@ export async function generateMetadata({ params }: { params: { date: string } })
   return {
     title: `Daily Brief: ${display}`,
     alternates: { canonical: `/daily/${params.date}` },
+    robots: { index: false, follow: true },
     description: `All insurance and finance news from PolicyRix for ${display}. Verified stories from global sources.`,
   };
 }
