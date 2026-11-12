@@ -211,3 +211,13 @@ Claude then must:
 - Yesterday's push got a 403 (git credential was for account smohanty2628, repo owner is skmohanty2628); owner must clear cached GitHub credential.
 - LinkedIn: 6 posts + images in linkedin post/2026-11-11/; posting via Chrome done by Claude on user's instruction (see chat for outcome).
 - Build OK, validate_json OK. Do NOT click AdSense "I confirm I have fixed the issues".
+
+### Nov 12 daily run (6 new + 5 upgrades)
+- New (content/news/2026-11-12.json, 6 articles, 800+ words each): 001 Hannover Re 9M 2026 (Germany; Boersen-Zeitung + Insurance Edge), 002 Munich Re Q3 2026 final statement (Germany; Artemis + Reinsurance News; prelim was covered Oct 24), 003 Intact Q3 2026 (Canada; Insurance Business Nov 4), 004 Assurant Q3 2026 (US; Business Wire release), 005 Kemper Q3 2026 (US; SEC 8-K Exhibit 99.1 plus Insurance Business), 006 IRDAI four-layer motor policy structure from Dec 15 (India; Angel One + IANS). 2 US, 2 Germany, 1 Canada, 1 India.
+- Skipped as already live: HDFC Life H1 FY27, ICICI Lombard Q2 FY27, Munich Re prelim. Swiss Re not used (Switzerland is not a valid country).
+- Upgrades (06-17, 06-16, 06-11, 06-16, 06-14 date files modified in content/news): Bank of Japan 1% hike (2026-06-17-002), RBA June hold at 4.35% (2026-06-16-003), Bank of Canada June 10 hold (2026-06-11-002), ECB private credit stress test (2026-06-16-006; the archive's "4% of assets" and "5-6%" figures are NOT in the ECB text and were removed; country changed to Germany), Munich court Google AI Overviews ruling (2026-06-14-004; the archive's EU AI Act and Product Liability Directive dates could not be verified and were removed). Gov sites are still not fetchable from the sandbox; used press and law-firm coverage.
+- Nov 11 LinkedIn: posts 1 and 2 were scheduled by Claude (11:00 AM, 12:30 PM). LinkedIn then showed "You've reached today's posting limit. Verify now" at post 3; Claude did NOT click Verify. Posts 3-6 text was given in chat for later.
+- Nov 12 LinkedIn: 6 posts + images saved to linkedin post/2026-11-12/. See chat for how many LinkedIn accepted.
+- Nov 11 push 403 was fixed by the owner; Nov 10 and Nov 11 pages and the 5 Nov 11 upgrades were verified live on Nov 11.
+- Search Console check Nov 11: sitemap last read Nov 9 (492 discovered pages); a Nov 11 article was "URL is unknown to Google". Request indexing was not clicked by Claude.
+- Do NOT click AdSense "I confirm I have fixed the issues".
