@@ -234,3 +234,9 @@ Claude then must:
 - Added 3 calculators (health plan cost comparison, compound interest, mortgage affordability) with WebApplication schema, and 5 guides (compare health plans, compound interest, house affordability/DTI, fixed vs adjustable mortgage, home insurance replacement cost). All worked examples were recomputed in code.
 - UX: homepage leads with Guides & Calculators and new H1; category/country pages show 24 stories with "Show more" (was 600+ cards); every article links to related guides/tools (lib/related.ts); bylines are PolicyRix Team.
 - Daily run from Nov 13: 2 analysis + up to 3 news per day, 1 new guide twice a week, 1 new calculator weekly; keep archive slugs; no AdSense review until GSC shows steady impressions and clicks.
+
+## Nov 13 daily run (new strategy, Friday)
+- content/news/2026-11-13.json: 3 analysis pieces (net income vs operating earnings gap across 9 insurers; India Q2 FY27 insurer scorecard; Florida home insurer margins and premiums) and 3 news items (Allianz 9M record profit; Aviva 9M trading update; APRA System Risk Outlook).
+- New guide: /guides/apr-vs-interest-rate-difference (worked example recomputed in code: Loan A 8% + 600 fee = APR 9.3%, Loan B 7.5% + 1,000 fee = APR 9.7%).
+- No archive upgrades today (strategy change: original analysis and guides first).
+- PC link was down at the start of the run.
