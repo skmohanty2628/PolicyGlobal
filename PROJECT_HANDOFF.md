@@ -240,3 +240,10 @@ Claude then must:
 - New guide: /guides/apr-vs-interest-rate-difference (worked example recomputed in code: Loan A 8% + 600 fee = APR 9.3%, Loan B 7.5% + 1,000 fee = APR 9.7%).
 - No archive upgrades today (strategy change: original analysis and guides first).
 - PC link was down at the start of the run.
+
+## Nov 14 daily run (Saturday)
+- content/news/2026-11-14.json: 3 analysis pieces (European insurers' and reinsurers' 2026 nat cat budget usage: Swiss Re ~40% of FY budget, Hannover Re ~74% of 9M budget, SCOR 54%, Munich Re Q3 ~83%, AXA over budget; UK two-year fix 5.97% vs tracker 4.68% repayment maths on a 200k/25y loan, break-even needs ~1.29pt immediate Bank Rate rise; Medicare 2027 final vs projected costs, high-drug-user example +$416) and 3 news items (Co-operators General Q3 underwriting loss, 109.7% combined ratio; ACCC preliminary view against IAG's RAC Insurance public benefit application, IAG reply due Dec 1, final Feb 1 2027; Liberty Mutual Q3 net income -7%, US Retail premiums -5.6%).
+- All calculations recomputed in code. Medicare Part B 2027 ($209.50) is labelled a Trustees projection; update the article when CMS publishes the official figure (expected mid-November).
+- Saturday: no guide or calculator. No archive upgrades.
+- PC link worked: files written directly into the project folder.
+- TODO next run: Search Console indexing for Nov 13 articles left over plus Nov 14 analysis URLs; LinkedIn posts 3 and 4 from Nov 13 plus today's analysis posts as the daily limit allows.
