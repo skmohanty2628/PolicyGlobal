@@ -247,3 +247,9 @@ Claude then must:
 - Saturday: no guide or calculator. No archive upgrades.
 - PC link worked: files written directly into the project folder.
 - TODO next run: Search Console indexing for Nov 13 articles left over plus Nov 14 analysis URLs; LinkedIn posts 3 and 4 from Nov 13 plus today's analysis posts as the daily limit allows.
+
+## Nov 15 daily run (Sunday)
+- content/news/2026-11-15.json: 3 analysis pieces (US car insurance CPI: index fell ~4.6% May to Sep then +0.7% in Oct while repair prices +5% to 6%; India big four life insurers H1 FY27 VNB scorecard: combined VNB ~Rs 13,436 cr, +25%, LIC growth mostly from margin; Lemonade vs Root vs Hippo Q3 strategy comparison) and 3 news items (FCA rules for early UK car finance compensation offers, Barclays Partner Finance first; Hiscox 9M premiums +9.5%; Great Eastern Q3 profit -72% on investments, core +6%).
+- All calculations recomputed in code. CMS still had not published 2027 Part B as of Nov 15; the Nov 14 Medicare article stays labelled as projection.
+- Sunday: no guide or calculator. No archive upgrades.
+- TODO next run (Mon Nov 16): Search Console performance check (clicks, impressions, indexed pages) into this file; request indexing for Nov 14 and Nov 15 analysis URLs; LinkedIn only when the owner asks (posts waiting: Nov 13 posts 3-4, Nov 14 posts 1-3, Nov 15 posts 1-3).
