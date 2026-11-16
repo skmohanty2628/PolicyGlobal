@@ -253,3 +253,10 @@ Claude then must:
 - All calculations recomputed in code. CMS still had not published 2027 Part B as of Nov 15; the Nov 14 Medicare article stays labelled as projection.
 - Sunday: no guide or calculator. No archive upgrades.
 - TODO next run (Mon Nov 16): Search Console performance check (clicks, impressions, indexed pages) into this file; request indexing for Nov 14 and Nov 15 analysis URLs; LinkedIn only when the owner asks (posts waiting: Nov 13 posts 3-4, Nov 14 posts 1-3, Nov 15 posts 1-3).
+
+## Nov 16 daily run (Monday) + weekly Search Console check
+- Search Console (last 28 days, as of Nov 16): 0 clicks, 13 impressions, avg position 1.1. Page indexing: 17 indexed, 533 not indexed (478 "Discovered - currently not indexed", 33 "Crawled - currently not indexed", 17 page with redirect, 2 blocked 4xx, 2 404, 1 duplicate without canonical). Main problem: Google discovers URLs but is not crawling them, a site-authority/crawl-budget signal. Keep adding internal links from home, guides and related boxes to new analysis; avoid publishing thin pages.
+- Indexing requested Nov 16 for all 6 Nov 14 and Nov 15 analysis URLs (all 'not indexed'; Nov 14 reinsurer piece was 'Discovered - currently not indexed').
+- content/news/2026-11-16.json: 4 analysis/explainers (US mortgage rates 7.11% in dollars on a $400k loan; India FD real returns after 6.09% CPI; UK motor premiums vs record claims, ABI Q3; Texas roof-age rule and percentage hail deductibles) and 2 news (Jane Kim elected California insurance commissioner; India CPI 6.09%).
+- Calculations recomputed in code. CMS 2027 Part B still not published as of Nov 16.
+- TODO: Tuesday Nov 17 is a GUIDE day. Suggested guide: "Fixed vs tracker mortgage" or "How percentage deductibles work". Request indexing for Nov 16 analysis URLs after deploy. LinkedIn posts waiting (only post when owner asks).
