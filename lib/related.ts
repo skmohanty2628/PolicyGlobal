@@ -3,7 +3,7 @@ import { TOOLS } from './tools';
 
 // Which guides and tools help a reader of each news category.
 const MAP: Record<string, { guides: string[]; tools: string[] }> = {
-  'Insurance': { guides: ['what-is-a-combined-ratio-insurance', 'how-much-home-insurance-do-you-need-replacement-cost'], tools: ['deductible-break-even-calculator'] },
+  'Insurance': { guides: ['percentage-deductible-home-insurance-wind-hail-hurricane', 'what-is-a-combined-ratio-insurance', 'how-much-home-insurance-do-you-need-replacement-cost'], tools: ['deductible-break-even-calculator'] },
   'Auto Insurance': { guides: ['what-is-a-combined-ratio-insurance'], tools: ['deductible-break-even-calculator'] },
   'Healthcare Insurance': { guides: ['how-to-compare-health-insurance-plans-by-total-cost'], tools: ['health-plan-cost-comparison-calculator'] },
   'Life Insurance': { guides: [], tools: ['life-insurance-needs-calculator'] },
