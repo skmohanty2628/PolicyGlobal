@@ -7,7 +7,7 @@ const MAP: Record<string, { guides: string[]; tools: string[] }> = {
   'Auto Insurance': { guides: ['what-is-a-combined-ratio-insurance'], tools: ['deductible-break-even-calculator'] },
   'Healthcare Insurance': { guides: ['how-to-compare-health-insurance-plans-by-total-cost'], tools: ['health-plan-cost-comparison-calculator'] },
   'Life Insurance': { guides: [], tools: ['life-insurance-needs-calculator'] },
-  'Loans & Mortgage': { guides: ['apr-vs-interest-rate-difference', 'how-much-house-can-you-afford-debt-to-income', 'fixed-vs-adjustable-rate-mortgage'], tools: ['mortgage-affordability-calculator', 'loan-emi-calculator'] },
+  'Loans & Mortgage': { guides: ['when-to-refinance-mortgage-break-even', 'apr-vs-interest-rate-difference', 'how-much-house-can-you-afford-debt-to-income', 'fixed-vs-adjustable-rate-mortgage'], tools: ['mortgage-refinance-break-even-calculator', 'mortgage-affordability-calculator', 'loan-emi-calculator'] },
   'Banking': { guides: ['apr-vs-interest-rate-difference', 'fixed-vs-adjustable-rate-mortgage', 'how-compound-interest-works'], tools: ['loan-emi-calculator'] },
   'Economy': { guides: ['how-compound-interest-works', 'fixed-vs-adjustable-rate-mortgage'], tools: ['compound-interest-calculator'] },
   'Personal Finance': { guides: ['how-compound-interest-works'], tools: ['compound-interest-calculator'] },

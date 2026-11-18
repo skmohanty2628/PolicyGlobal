@@ -35,4 +35,10 @@ export const TOOLS = [
     short: 'Estimate the home price your income and debts can support.',
     icon: '🔑',
   },
+  {
+    slug: 'mortgage-refinance-break-even-calculator',
+    title: 'Mortgage Refinance Break-Even Calculator',
+    short: 'How long a lower rate takes to repay refinancing costs.',
+    icon: '🔁',
+  },
 ];

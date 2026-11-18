@@ -14,9 +14,10 @@ import { guide as g12 } from './fixed-vs-adjustable';
 import { guide as g13 } from './home-insurance-amount';
 import { guide as g14 } from './apr-vs-interest-rate';
 import { guide as g15 } from './percentage-deductibles';
+import { guide as g16 } from './refinance-break-even';
 
 export type { Guide };
-export const GUIDES: Guide[] = [g15, g14, g9, g10, g11, g12, g13, g1, g2, g3, g4, g5, g6, g7, g8];
+export const GUIDES: Guide[] = [g16, g15, g14, g9, g10, g11, g12, g13, g1, g2, g3, g4, g5, g6, g7, g8];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug) ?? null;
 export const guideWords = (g: Guide) =>
