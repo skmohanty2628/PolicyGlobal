@@ -285,3 +285,8 @@ Claude then must:
 - Updated content/news/2026-11-14.json (Medicare explainer) with a dated note giving the final CMS figures (pending item now closed).
 - Freddie Mac Nov 19 PMMS still not showing on freddiemac.com at run time (page shows Nov 12, 7.11%).
 - TODO: Monday Nov 23: Search Console check. Request indexing for Nov 16 to 20 analysis, the three new guides and the refinance calculator after deploy. LinkedIn: 70 pending invitations on the Policy Rix profile; withdraw the oldest before sending many more.
+
+## Nov 21 daily run (Saturday)
+- content/news/2026-11-21.json: 3 analysis (Freddie Mac back up to 7.28% from 7.11%, $400k loan +$46/month, buying power -$6,750, survey spread vs Bankrate 7.42%; reinsurance down about a third compounded 12%/16%/10% vs US home premiums up about 16.5% over 2025-26; first FOS/FCA joint claims report, 66,000 of 214,800 complaints, delay uphold 50% vs 34%) and 3 news (Japan core CPI 2.2%, BoJ Dec 18 hike to 1.5% likely; Canada CPI 3.1%, core 1.9%, BoC 2.5%, Dec 9; IRDAI Grievance Resolution Month, 2.21 lakh pending cases).
+- LinkedIn from Nov 21: 14 connection requests a day; one combined daily post with one PNG, published by Claude after the owner's push.
+- TODO: Monday Nov 23: Search Console check. Request indexing for Nov 16 to 21 analysis, three new guides and the refinance calculator. Tuesday Nov 24 is a GUIDE day (idea: how to complain to an insurer and the ombudsman, UK/India/US).
